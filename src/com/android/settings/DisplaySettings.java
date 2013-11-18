@@ -39,6 +39,7 @@ import android.provider.Settings;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.DropDownPreference;
 import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
@@ -91,8 +92,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             = "camera_double_tap_power_gesture";
     private static final String KEY_WALLPAPER = "wallpaper";
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
+    private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
+    private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
 
     private Preference mFontSizePref;
+    private SwitchPreference mWakeUpWhenPluggedOrUnplugged;
+    private PreferenceCategory mWakeUpOptions;
 
     private TimeoutListPreference mScreenTimeoutPreference;
     private ListPreference mNightModePreference;
@@ -116,6 +121,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         final ContentResolver resolver = activity.getContentResolver();
 
         addPreferencesFromResource(R.xml.display_settings);
+
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         mScreenSaverPreference = findPreference(KEY_SCREEN_SAVER);
         if (mScreenSaverPreference != null
@@ -251,6 +258,21 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             final int currentNightMode = uiManager.getNightMode();
             mNightModePreference.setValue(String.valueOf(currentNightMode));
             mNightModePreference.setOnPreferenceChangeListener(this);
+        }
+
+        mWakeUpOptions = (PreferenceCategory) prefSet.findPreference(KEY_WAKEUP_CATEGORY);
+        mWakeUpWhenPluggedOrUnplugged =
+            (SwitchPreference) findPreference(KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED);
+
+        // hide option if device is already set to never wake up
+        if(!getResources().getBoolean(
+                com.android.internal.R.bool.config_unplugTurnsOnScreen)) {
+                mWakeUpOptions.removePreference(mWakeUpWhenPluggedOrUnplugged);
+                prefSet.removePreference(mWakeUpOptions);
+        } else {
+            mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(resolver,
+                        Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
+            mWakeUpWhenPluggedOrUnplugged.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -456,6 +478,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "could not persist night mode setting", e);
             }
         }
+        if (KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED,
+                    (Boolean) objValue ? 1 : 0);
+        }
+
         return true;
     }
 
