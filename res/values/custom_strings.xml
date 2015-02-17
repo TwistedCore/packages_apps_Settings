@@ -417,4 +417,8 @@
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
 
+    <!-- Audio ducking -->
+    <string name="interruptions_ignore_while_media_title">Prevent audio ducking</string>
+    <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
+
 </resources>
