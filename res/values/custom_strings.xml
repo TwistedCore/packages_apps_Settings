@@ -94,4 +94,8 @@
     <string name="remove_tile_summaries_title">Remove tile summaries</string>
     <string name="remove_tile_summaries_summary">Remove tiles summaries that display underneath tile titles</string>
 
+    <!-- kill app long press back -->
+    <string name="kill_app_longpress_back">Kill app back button</string>
+    <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
+
 </resources>
