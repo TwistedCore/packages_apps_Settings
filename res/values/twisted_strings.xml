@@ -196,6 +196,8 @@
     <string name="double_tap_to_sleep_summary">Double tap status bar to put device to sleep</string>
     <string name="double_tap_sleep_anywhere_title">Tap lockscreen to sleep</string>
     <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on lockscreen to put device to sleep</string>
+    <string name="double_tap_sleep_nav_bar_title">Tap navbar to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
 
     <!-- DoubleTap2Wake Doze -->
     <string name="doze_wakeup_doubletap_title">Double-tap to wake on doze</string>
