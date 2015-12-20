@@ -19,7 +19,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/statusbar_category">
+    android:title="@string/status_bar_category">
 
     <PreferenceCategory
         android:title="@string/status_bar_clock_title">
@@ -61,6 +61,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/status_bar_gesture_title">
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="double_tap_sleep_gesture"
+                android:title="@string/double_tap_to_sleep_title"
+                android:summary="@string/double_tap_to_sleep_summary"
+                android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
 

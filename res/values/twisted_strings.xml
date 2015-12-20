@@ -19,6 +19,7 @@
 
     <!-- Twisted Core Categories -->
     <string name="statusbar_category">Status Bar</string>
+    <string name="status_bar_gesture_title">Gestures</string>
 
     <!-- Changelog -->
     <string name="changelog_crdroid_title">Changelog</string>
@@ -63,5 +64,10 @@
 <!-- Sound & Notification Settings -->
     <!-- Volume settings - Volume adjustment sound -->
     <string name="volume_adjust_sounds_title">Volume adjustment sounds</string>
+
+    <!-- tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Tap statusbar to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap status bar to put device to sleep</string>
+
 </resources>
 
