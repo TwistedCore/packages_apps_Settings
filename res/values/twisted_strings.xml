@@ -191,5 +191,9 @@
     <string name="hide_lockscreen_clock_title">Show lockscreen clock</string>
     <string name="hide_lockscreen_date_title">Show lockscreen date</string>
 
+    <!-- tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Tap statusbar to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap status bar to put device to sleep</string>
+
 </resources>
 
