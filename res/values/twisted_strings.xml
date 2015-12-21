@@ -194,6 +194,8 @@
     <!-- tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Tap statusbar to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap status bar to put device to sleep</string>
+    <string name="double_tap_sleep_anywhere_title">Tap lockscreen to sleep</string>
+    <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on lockscreen to put device to sleep</string>
 
 </resources>
 
