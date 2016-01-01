@@ -61,4 +61,8 @@
         android:key="apps_list"
         android:title="@string/memory_usage_apps" />
 
+    <Preference
+        android:key="apps_startup"
+        android:title="@string/memory_startup_apps_title" />
+
 </PreferenceScreen>
