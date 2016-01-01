@@ -24,4 +24,7 @@
     <string name="app_ops_categories_device">Device</string>
     <string name="app_ops_categories_bootup">Bootup</string>
 
+    <!-- Memory -->
+    <string name="memory_startup_apps_title">Apps started on boot</string>
+
 </resources>
