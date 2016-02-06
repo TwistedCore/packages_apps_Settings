@@ -35,4 +35,16 @@
             android:summary="@string/status_bar_brightness_control_summary"
             android:title="@string/status_bar_brightness_control_title" />
 
+        <!-- Hide Lockscreen clock & date -->
+
+         <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="hide_lockscreen_clock"
+            android:title="@string/hide_lockscreen_clock_title"
+            android:defaultValue="true" />
+
+         <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="hide_lockscreen_date"
+            android:title="@string/hide_lockscreen_date_title"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
