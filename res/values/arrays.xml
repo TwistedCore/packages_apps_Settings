@@ -552,6 +552,7 @@
         <item>Messaging</item>
         <item>Media</item>
         <item>Device</item>
+        <item>Bootup</item>
     </string-array>
 
     <!-- User display names for app ops codes -->
@@ -620,6 +621,7 @@
         <item>turn on screen</item>
         <item>get accounts</item>
         <item>run in background</item>
+        <item>start at boot</item>
     </string-array>
 
     <!-- User display names for app ops codes -->
@@ -688,6 +690,7 @@
         <item>@string/app_ops_turn_on_screen</item>
         <item>@string/app_ops_get_accounts</item>
         <item>@string/app_ops_run_in_background</item>
+        <item>@string/app_ops_boot_completed</item>
     </string-array>
 
     <!-- Titles for the list of long press timeout options. -->
