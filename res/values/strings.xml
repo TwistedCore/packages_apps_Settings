@@ -3544,6 +3544,7 @@
     <string name="app_ops_turn_on_screen">Activate display</string>
     <string name="app_ops_get_accounts">Get accounts</string>
     <string name="app_ops_run_in_background">Run in background</string>
+    <string name="app_ops_boot_completed">Start at boot</string>
 
     <!-- [CHAR LIMIT=25] Text shown when there are no default Apps -->
     <string name="no_default_apps">No default Apps.</string>
