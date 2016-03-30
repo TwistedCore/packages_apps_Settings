@@ -58,6 +58,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE_PULSE_PICKUP = "doze_pulse_on_pickup";
     private static final String KEY_DOZE_PULSE_ON_NOTIFICATION = "doze_pulse_on_notifications";
     private static final String KEY_DOZE_BRIGHTNESS_LEVEL = "doze_brightness_level";
+    private static final String KEY_DOZE_WAKEUP_DOUBLETAP = "doze_wakeup_doubletap";
 
     private static final String SYSTEMUI_METADATA_NAME = "com.android.systemui";
 
@@ -67,6 +68,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
     private ListPreference mDozePulseOut;
     private SwitchPreference mDozeTriggerPickup;
     private SwitchPreference mDozePulseOnNotification;
+    private SwitchPreference mDozeWakeupDoubleTap;
 
     private DozeBrightnessDialog mDozeBrightnessDialog;
     private Preference mDozeBrightness;
@@ -101,6 +103,9 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
 
         mDozePulseOnNotification = (SwitchPreference) findPreference(KEY_DOZE_PULSE_ON_NOTIFICATION);
         mDozePulseOnNotification.setOnPreferenceChangeListener(this);
+
+        mDozeWakeupDoubleTap = (SwitchPreference) findPreference(KEY_DOZE_WAKEUP_DOUBLETAP);
+        mDozeWakeupDoubleTap.setOnPreferenceChangeListener(this);
 
         updateDozeOptions();
 
@@ -168,6 +173,11 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
                     Settings.System.DOZE_PULSE_ON_NOTIFICATIONS, 0);
             mDozePulseOnNotification.setChecked(value != 0);
         }
+        if (mDozeWakeupDoubleTap != null) {
+            int value = Settings.System.getInt(getContentResolver(),
+                    Settings.System.DOZE_WAKEUP_DOUBLETAP, 0);
+            mDozeWakeupDoubleTap.setChecked(value != 0);
+        }
     }
 
     @Override
@@ -216,6 +226,11 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.DOZE_PULSE_ON_NOTIFICATIONS, value ? 1 : 0);
+        }
+        if (preference == mDozeWakeupDoubleTap) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DOZE_WAKEUP_DOUBLETAP, value ? 1 : 0);
         }
         return true;
     }
