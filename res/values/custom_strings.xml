@@ -34,6 +34,9 @@
     <!-- Clang Compiler -->
     <string name="build_compiler_clang">Clang version</string>
     <string name="build_compiler_default">Unknown</string>
+    
+    <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
+    <string name="local_backup_password_title">Desktop backup password</string>
 
     <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic</string>
