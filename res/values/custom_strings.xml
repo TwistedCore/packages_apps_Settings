@@ -77,7 +77,6 @@
     <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
     <string name="clock_date_string_edittext_summary">Enter string</string>
 
-
     <!-- Dashboard suggestions -->
     <string name="dashboard_category">Dashboard options</string> 
     <string name="disable_suggestions_title">Disable suggestions</string>
@@ -85,4 +84,11 @@
     <string name="remove_tile_summaries_title">Remove tile summaries</string>
     <string name="remove_tile_summaries_summary">Remove tiles summaries that display underneath tile titles</string>
 
+    <!-- Lockscreen items clock, date, alarm text -->
+    <string name="lockscreen_items_settings_title">Lockscreen Items</string>
+    <string name="lockscreen_display_options">options to change lockscreen display</string>
+    <string name="lockscreen_clock_title">Lockscreen clock</string>
+    <string name="lockscreen_date_title">Lockscreen date</string>
+    <string name="lockscreen_alarm_title">Lockscreen alarm text</string>
+ 
 </resources>

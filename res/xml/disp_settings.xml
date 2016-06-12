@@ -17,6 +17,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/display_settings_title">
 
+    <PreferenceScreen
+        android:fragment="com.android.settings.twisted.LockScreenItemsSettings"
+        android:key="lockscreen_items"
+        android:summary="@string/lockscreen_display_options"
+        android:title="@string/lockscreen_items_settings_title" />
+
         <ListPreference
             android:key="pref_scrollingcache"
             android:dialogTitle="@string/pref_scrollingcache_title"
