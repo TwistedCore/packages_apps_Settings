@@ -36,4 +36,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="twisted_volume"
+        android:title="@string/twisted_volume">
+
+        <PreferenceScreen
+            android:fragment="com.android.settings.twisted.VolumeRockerSettings"
+            android:key="twisted_volumerocker_settings"
+            android:title="@string/volumerocker_settings_title"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
