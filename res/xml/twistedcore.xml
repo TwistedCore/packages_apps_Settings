@@ -31,6 +31,11 @@
             android:title="@string/twisted_settings_title"/>
 
         <PreferenceScreen
+            android:fragment="com.android.settings.twisted.RecentSettings"
+            android:key="twisted_recent_settings"
+            android:title="@string/recent_settings_title"/>
+
+        <PreferenceScreen
             android:fragment="com.android.settings.twisted.VolumeRockerSettings"
             android:key="twisted_volumerocker_settings"
             android:title="@string/volumerocker_settings_title"/>
