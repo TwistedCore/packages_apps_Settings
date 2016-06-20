@@ -18,9 +18,11 @@
     <string name="twistedcore_title">Twisted Core</string>
     <string name="twisted_display">Twisted Display Settings</string>
     <string name="twisted_volume">Twisted Volume Button Settings</string>
+    <string name="twisted_recents">Twisted Recent Apps Setup</string>
 
     <!-- Volume Rocker fragment -->
     <string name="volumerocker_settings_title">Volume rocker</string>
+    <string name="recent_settings_title">Recent apps</string>
 
     <!-- Display fragment -->
     <string name="twisted_settings_title">Display Options</string>
