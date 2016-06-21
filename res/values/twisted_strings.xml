@@ -23,6 +23,7 @@
     <!-- Volume Rocker fragment -->
     <string name="volumerocker_settings_title">Volume rocker</string>
     <string name="recent_settings_title">Recent apps</string>
+    <string name="statusbar_settings_title">Statusbar</string>
 
     <!-- Display fragment -->
     <string name="twisted_settings_title">Display Options</string>
