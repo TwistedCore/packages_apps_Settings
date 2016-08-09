@@ -145,4 +145,8 @@
     <string name="brightness_icon_title">Brightness icon </string>
     <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
 
+    <!-- Bluetooth status -->
+    <string name="bluetooth_battery_title">Show Bluetooth battery status</string>
+    <string name="bluetooth_battery_summary">Show battery status for the currently connected bluetooth device, if available.</string>
+
 </resources>
