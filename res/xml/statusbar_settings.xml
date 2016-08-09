@@ -45,6 +45,12 @@
         android:summary="@string/double_tap_sleep_anywhere_summary"
         android:defaultValue="false" />
 
+     <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="bluetooth_show_battery"
+        android:title="@string/bluetooth_battery_title"
+        android:summary="@string/bluetooth_battery_summary"
+        android:defaultValue="false" />
+
         <ListPreference
             android:dialogTitle="@string/sysui_qqs_count_title"
             android:entries="@array/sysui_qqs_count_entries"
@@ -76,4 +82,4 @@
             android:entries="@array/qs_columns_landscape_entries"
             android:entryValues="@array/qs_columns_landscape_values" />
 
-</PreferenceScreen> 
+</PreferenceScreen>
