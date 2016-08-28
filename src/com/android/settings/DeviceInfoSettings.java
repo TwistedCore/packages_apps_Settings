@@ -52,6 +52,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
     private static final String LOG_TAG = "DeviceInfoSettings";
 
+    private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
@@ -127,6 +128,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         findPreference(KEY_ROM_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_COMPILER_GCC, "ro.build.gcc");
         setValueSummary(KEY_MOD_BUILD_COMPILER_CLANG, "ro.build.clang");
+        setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);

@@ -89,13 +89,6 @@
                 settings:allowDividerAbove="true"
                 settings:allowDividerBelow="true"/>
 
-        <!-- ROM version -->
-        <Preference android:key="rom_version"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:title="@string/rom_version"
-                android:summary="@string/rom_version_default" />
-
         <!-- Detailed build version -->
         <Preference android:key="build_number"
                 android:enabled="false"
@@ -110,6 +103,30 @@
                 android:title="@string/vendor_version"
                 android:summary="@string/vendor_version_default" />
 
+        <!-- SELinux status information -->
+        <com.android.settings.DividerPreference
+                android:key="selinux_status"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:selectable="false"
+                android:title="@string/selinux_status"
+                android:summary="@string/selinux_status_enforcing"
+                settings:allowDividerAbove="true"
+                settings:allowDividerBelow="true"/>
+
+        <!-- ROM version -->
+        <Preference android:key="rom_version"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/rom_version"
+                android:summary="@string/rom_version_default" />
+
+        <!-- Twisted build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
+
         <!-- GCC used -->
         <Preference android:key="build_compiler_gcc"
                 style="?android:preferenceInformationStyle"
@@ -121,16 +138,5 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/build_compiler_clang"
                 android:summary="@string/build_compiler_default" />
-
-        <!-- SELinux status information -->
-        <com.android.settings.DividerPreference
-                android:key="selinux_status"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:selectable="false"
-                android:title="@string/selinux_status"
-                android:summary="@string/selinux_status_enforcing"
-                settings:allowDividerAbove="true"
-                settings:allowDividerBelow="true"/>
 
 </PreferenceScreen>
