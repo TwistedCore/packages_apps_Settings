@@ -62,7 +62,7 @@ public class ExpandedDesktopExtraPrefs extends SettingsPreferenceFragment
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.BENZO;
+        return MetricsEvent.DISPLAY;
     }
 
     @Override
