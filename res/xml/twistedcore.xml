@@ -18,6 +18,6 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/custom_title">
+    android:title="@string/twistedcore_title">
 
 </PreferenceScreen>

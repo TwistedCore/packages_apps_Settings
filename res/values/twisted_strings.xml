@@ -14,6 +14,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Twisted Core Settings -->
+    <string name="twistedcore_title">Twisted Core</string>
 
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Twisted build date</string>
