@@ -14,7 +14,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!-- Development Settings -->
+    <!-- Twisted Core Settings -->
+    <string name="twistedcore_title">Twisted Core</string>
+
+    <!-- Development Settings -->
     <!-- Dev Options Enabled by Default -->
     <string name="show_dev_already_enabled">No Need, Development settings are enabled by default.</string>
 
