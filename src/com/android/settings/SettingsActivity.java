@@ -58,6 +58,7 @@ import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.ChooseAccountActivity;
 import com.android.settings.accounts.ManagedProfileSettings;
+import com.android.settings.aosip.OwlsNestSettings;
 import com.android.settings.applications.AdvancedAppSettings;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.applications.InstalledAppDetails;
@@ -345,6 +346,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             TestingSettings.class.getName(),
             WifiAPITest.class.getName(),
             WifiInfo.class.getName(),
+            OwlsNestSettings.class.getName(),
     };
 
 
@@ -542,6 +544,7 @@ public class SettingsActivity extends SettingsDrawerActivity
 
         mIsShowingDashboard = className.equals(Settings.class.getName())
                 || className.equals(Settings.WirelessSettings.class.getName())
+                || className.equals(Settings.OwlsNestSettings.class.getName())
                 || className.equals(Settings.DeviceSettings.class.getName())
                 || className.equals(Settings.PersonalSettings.class.getName())
                 || className.equals(Settings.WirelessSettings.class.getName());
