@@ -17,6 +17,10 @@
     <!-- Twisted Core Settings -->
     <string name="twistedcore_title">Twisted Core</string>
 
+    <!-- Changelog -->
+    <string name="changelog_crdroid_title">Changelog</string>
+    <string name="changelog_crdroid_error">Unable to load changelog</string>
+
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Twisted build date</string>
     <string name="build_date_default">2015-01-01-0000</string>
