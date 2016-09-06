@@ -20,4 +20,9 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/twistedcore_title">
 
+        <!-- Changelog -->
+        <PreferenceScreen android:key="changelog"
+                android:title="@string/changelog_crdroid_title"
+                android:fragment="com.android.settings.crdroid.Changelog" />
+
 </PreferenceScreen>
