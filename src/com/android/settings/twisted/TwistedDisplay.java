@@ -15,12 +15,33 @@
  */
 package com.android.settings.twisted;
 
+import android.content.ContentResolver;
+import android.content.res.Resources;
+import android.content.Context;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
+import android.os.Vibrator;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v14.preference.SwitchPreference;
+import android.provider.Settings;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.HashMap;
+
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 import com.android.internal.logging.MetricsLogger;
-import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 public class TwistedDisplay extends SettingsPreferenceFragment {
 
@@ -32,6 +53,6 @@ public class TwistedDisplay extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.TWISTED_SETTINGS;
+        return MetricsEvent.TWISTED;
     }
 }

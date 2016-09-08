@@ -33,6 +33,6 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.TWISTED_SETTINGS;
+        return MetricsEvent.TWISTED;
     }
 }
