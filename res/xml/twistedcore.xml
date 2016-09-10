@@ -25,26 +25,14 @@
                 android:title="@string/changelog_crdroid_title"
                 android:fragment="com.android.settings.crdroid.Changelog" />
 
-    <PreferenceCategory
-        android:key="twisted_display"
-        android:title="@string/twisted_display">
-
         <PreferenceScreen
             android:fragment="com.android.settings.twisted.TwistedDisplay"
             android:key="twisted_display_settings"
             android:title="@string/twisted_settings_title"/>
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="twisted_volume"
-        android:title="@string/twisted_volume">
-
         <PreferenceScreen
             android:fragment="com.android.settings.twisted.VolumeRockerSettings"
             android:key="twisted_volumerocker_settings"
             android:title="@string/volumerocker_settings_title"/>
-
-    </PreferenceCategory>
 
 </PreferenceScreen>
