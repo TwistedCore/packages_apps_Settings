@@ -18,5 +18,7 @@
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Twisted build date</string>
     <string name="build_date_default">2015-01-01-0000</string>
-
+    <string name="twisted_version_title">Twisted version</string>
+    <string name="twisted_version_default">Unknown</string>
+    
 </resources>
