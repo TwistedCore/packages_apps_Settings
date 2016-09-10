@@ -73,7 +73,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.BENZO;
+        return MetricsEvent.TWISTED;
     }
 
     @Override
