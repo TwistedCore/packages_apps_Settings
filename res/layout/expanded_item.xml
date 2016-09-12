@@ -49,7 +49,7 @@
             android:layout_marginTop="2dip"
             android:singleLine="true"
             android:ellipsize="marquee"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="@color/expanded_app_title_color"
             android:textAppearance="@style/TextAppearance.Medium"
             android:textAlignment="viewStart" />
 
