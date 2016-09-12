@@ -116,4 +116,37 @@
                 android:summary="%s"
                 android:title="@string/display_vr_pref_title" />
 
+
+        <PreferenceCategory
+                android:key="dashboard_category"
+                android:title="@string/dashboard_category">
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="disable_suggestions"
+                android:title="@string/disable_suggestions_title"
+                android:summary="@string/disable_suggestions_summary"
+                android:defaultValue="false" />
+
+        </PreferenceCategory>
+        <PreferenceCategory
+                android:key="density_category"
+                android:title="@string/density_category">
+
+        <PreferenceScreen
+                android:key="font_size"
+                android:title="@string/title_font_size"
+                android:fragment="com.android.settings.accessibility.ToggleFontSizePreferenceFragment"
+                settings:keywords="@string/keywords_display_font_size" />
+
+        <com.android.settings.display.ScreenZoomPreference
+                android:key="screen_zoom"
+                android:title="@string/screen_zoom_title"
+                settings:keywords="@string/screen_zoom_keywords" />
+
+        <com.android.settings.display.DensityPreference
+                android:key="density"
+                android:title="@string/developer_smallest_width" />
+
+        </PreferenceCategory>
+
 </PreferenceScreen>
