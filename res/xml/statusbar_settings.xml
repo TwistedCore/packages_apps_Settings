@@ -16,4 +16,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <PreferenceScreen
+            android:key="network_traffic_state"
+            android:fragment="com.android.settings.NetworkTraffic"
+            android:summary="@string/network_traffic_summary"
+            android:title="@string/network_traffic_title" />
+
 </PreferenceScreen> 
