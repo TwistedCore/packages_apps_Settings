@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2015-2016 The Dirty Unicorns Project
  * Copyright (C) 2016 The Pure Nexus Project
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.settings.twisted;
 
 import android.content.Context;
@@ -45,7 +45,7 @@ import com.android.settings.Utils;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-public class StatusbarNotifications extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class StatusBarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
 
@@ -55,7 +55,7 @@ public class StatusbarNotifications extends SettingsPreferenceFragment implement
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.statusbar_notifications);
+        addPreferencesFromResource(R.xml.statusbar_settings);
 
         final PreferenceScreen prefSet = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
