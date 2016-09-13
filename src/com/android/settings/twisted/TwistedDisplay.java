@@ -39,6 +39,8 @@ import java.util.HashMap;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import android.provider.Settings.SettingNotFoundException;
+
 import com.android.settings.Utils;
 
 import com.android.internal.logging.MetricsLogger;
@@ -49,8 +51,10 @@ public class TwistedDisplay extends SettingsPreferenceFragment implements OnPref
     private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "1";
+    private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
 
     private ListPreference mScrollingCachePref;
+    private SwitchPreference mStatusBarBrightnessControl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +66,20 @@ public class TwistedDisplay extends SettingsPreferenceFragment implements OnPref
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+        mStatusBarBrightnessControl = (SwitchPreference) findPreference(STATUS_BAR_BRIGHTNESS_CONTROL);
+        mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
+        int statusBarBrightnessControl = Settings.System.getInt(getContentResolver(),
+                STATUS_BAR_BRIGHTNESS_CONTROL, 0);
+        mStatusBarBrightnessControl.setChecked(statusBarBrightnessControl != 0);
+        try {
+            if (Settings.System.getInt(getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS_MODE) == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC) {
+                mStatusBarBrightnessControl.setEnabled(false);
+                mStatusBarBrightnessControl.setSummary(R.string.status_bar_brightness_control_info);
+            }
+        } catch (SettingNotFoundException e) {
+        }
     }
 
     @Override
@@ -76,7 +94,12 @@ public class TwistedDisplay extends SettingsPreferenceFragment implements OnPref
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-         if (preference == mScrollingCachePref) {
+         if (preference == mStatusBarBrightnessControl) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(), STATUS_BAR_BRIGHTNESS_CONTROL,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mScrollingCachePref) {
             if (newValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
             return true;
