@@ -49,7 +49,7 @@
     <string name="recent_title">Recents screen</string>
     <string name="recent_summary">Configure your clear all button and misc recent options</string>
     <string name="recent_category">Recent apps</string>
-    <string name="stock_recent_category">Stock Recents</string>
+    <string name="recent_category">Recent Screen</string>
 
     <!-- Immersive Recents -->
     <string name="immersive_recents_title">Immersive Recents</string>

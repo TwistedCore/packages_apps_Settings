@@ -18,7 +18,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/stock_recents_category" >
+    android:title="@string/recent_category" >
 
          <ListPreference
             android:key="immersive_recents"
