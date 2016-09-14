@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.aosip.statusbar;
+package com.android.settings.twistedcore.statusbar;
 
 import android.app.ActivityManager;
 import android.app.AlertDialog;
@@ -64,14 +64,14 @@ public class ClockCategory extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.OWLSNEST;
+        return MetricsEvent.TWISTED;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.aosip_clock);
+        addPreferencesFromResource(R.xml.twistedcore_clock);
 
         ContentResolver resolver = getActivity().getContentResolver();
 

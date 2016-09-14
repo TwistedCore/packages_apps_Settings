@@ -27,6 +27,11 @@
              android:title="@string/force_expanded_notifications_title"
              android:summary="@string/force_expanded_notifications_summary" />
 
+        <PreferenceScreen 
+            android:key="status_bar_clock"
+            android:title="@string/clock_category"
+            android:fragment="com.android.settings.twistedcore.statusbar.ClockCategory" />
+
         <PreferenceScreen
             android:key="network_traffic_state"
             android:fragment="com.android.settings.NetworkTraffic"
