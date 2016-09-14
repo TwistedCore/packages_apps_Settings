@@ -131,6 +131,15 @@
     <string name="expanded_desktop_style_description">Choose a default expanded desktop style</string>
     <string name="expanded_desktop_title">Expanded desktop options</string>
 
+    <!-- Dashboard suggestions -->
+    <string name="dashboard_category">Dashboard options</string>
+    <string name="dashboard_suggestions_title">Dashboard suggestions</string>
+    <string name="summary_dashboard_suggestions_enabled">Dashboard suggestions are enabled</string>
+    <string name="summary_dashboard_suggestions_disabled">Dashboard suggestions are disabled</string>
+    <!-- Dashboard summaries -->
+    <string name="remove_tile_summaries_title">Remove tile summaries</string>
+    <string name="remove_tile_summaries_summary">Remove tiles summaries that display underneath tile titles</string>
+
     <!-- Quick settings tiles columns and rows config -->
     <string name="qs_layout_category">QS tiles layout</string>
     <string name="qs_columns_title">Columns</string>

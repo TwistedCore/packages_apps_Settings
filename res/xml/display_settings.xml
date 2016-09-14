@@ -89,6 +89,29 @@
                 android:title="@string/tap_to_wake"
                 android:summary="@string/tap_to_wake_summary" />
 
+        <PreferenceCategory
+                android:key="dashboard_category"
+                android:title="@string/dashboard_category">
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="disable_suggestions"
+                android:title="@string/dashboard_suggestions_title"
+                android:summaryOn="@string/summary_dashboard_suggestions_enabled"
+                android:summaryOff="@string/summary_dashboard_suggestions_disabled"
+                android:defaultValue="true" />
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="remove_tile_summary"
+                android:title="@string/remove_tile_summaries_title"
+                android:summary="@string/remove_tile_summaries_summary"
+                android:defaultValue="false" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory
+                android:key="other_category"
+                android:title="Other options">
+
         <PreferenceScreen
                 android:key="font_size"
                 android:title="@string/title_font_size"
@@ -122,16 +145,6 @@
                 android:summary="%s"
                 android:title="@string/display_vr_pref_title" />
 
-        <com.android.settings.preference.SystemSettingSwitchPreference
-                android:key="disable_suggestions"
-                android:title="@string/disable_suggestions_title"
-                android:summary="@string/disable_suggestions_summary"
-                android:defaultValue="false" />
-
-        <com.android.settings.preference.SystemSettingSwitchPreference
-                android:key="remove_tile_summary"
-                android:title="@string/remove_tile_summaries_title"
-                android:summary="@string/remove_tile_summaries_summary"
-                android:defaultValue="false" />
+        </PreferenceCategory>
 
 </PreferenceScreen>
