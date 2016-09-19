@@ -19,6 +19,9 @@
     <!-- ROM version -->
     <string name="rom_version">Twisted version</string>
     <string name="rom_version_default">Unknown</string>
+    <!-- Vendor version -->
+    <string name="vendor_version">Vendor version</string>
+    <string name="vendor_version_default">Unknown</string>
     <!-- Model Name -->
     <string name="model_name">Model name</string>
     
