@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.twistedcore.recentscreen;
+package com.android.settings.twistedcore.recent;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -34,7 +34,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-public class Recents extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class RecentScreen extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String IMMERSIVE_RECENTS = "immersive_recents";
 

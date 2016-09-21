@@ -31,7 +31,7 @@
                 android:fragment="com.android.settings.twistedcore.statusbar.ClockCategory" />
 
         <!-- Recent Screen -->
-        <PreferenceScreen android:key="status_bar_clock"
+        <PreferenceScreen android:key="recent_screen"
                 android:title="@string/recent_category"
                 android:fragment="com.android.settings.twistedcore.recent.RecentScreen" />
 
