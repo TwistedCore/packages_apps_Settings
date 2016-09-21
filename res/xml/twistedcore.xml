@@ -45,4 +45,9 @@
             android:key="twisted_powermenu_settings"
             android:title="@string/powermenu_settings_title"/>
 
+        <PreferenceScreen
+            android:fragment="com.android.settings.twisted.NavbarSettings"
+            android:key="flash_navbar_settings"
+            android:title="@string/navbar_settings_title"/>
+
 </PreferenceScreen>

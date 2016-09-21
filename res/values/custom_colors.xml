@@ -48,4 +48,7 @@
     <color name="storage_private_3">#fff2a600</color>
     <color name="storage_private_4">#ffec407a</color>
     <color name="storage_private_5">#ffc0ca33</color>
+
+    <color name="theme_accent">#ff009688</color>
+    <color name="action_picker_fab_background">@color/theme_accent</color>
 </resources>
