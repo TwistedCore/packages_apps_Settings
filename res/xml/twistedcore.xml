@@ -15,15 +15,24 @@
 -->
 
 <PreferenceScreen
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/twistedcore_title">
+
+
+    <PreferenceCategory android:key="info_category"
+                android:title="Info">
 
         <!-- Changelog -->
         <PreferenceScreen android:key="changelog"
                 android:title="@string/changelog_crdroid_title"
                 android:fragment="com.android.settings.crdroid.Changelog" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:key="ui_category"
+                android:title="User Interface">
 
         <!-- Statusbar - Clock -->
         <PreferenceScreen android:key="status_bar_clock"
@@ -34,5 +43,7 @@
         <PreferenceScreen android:key="recent_screen"
                 android:title="@string/recent_category"
                 android:fragment="com.android.settings.twistedcore.recent.RecentScreen" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
