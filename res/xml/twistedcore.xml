@@ -34,13 +34,18 @@
     <PreferenceCategory android:key="ui_category"
                 android:title="User Interface">
 
-        <!-- Statusbar - Clock -->
-        <PreferenceScreen android:key="status_bar_clock"
+        <!-- Clock Category -->
+        <PreferenceScreen android:key="clock_category"
                 android:title="@string/clock_category"
                 android:fragment="com.android.settings.twistedcore.statusbar.ClockCategory" />
 
-        <!-- Recent Screen -->
-        <PreferenceScreen android:key="recent_screen"
+        <!-- Display Category -->
+        <PreferenceScreen android:key="display_category"
+                android:title="@string/display_category"
+                android:fragment="com.android.settings.twistedcore.display.DisplayCategory" />
+
+        <!-- Recent Screen Category -->
+        <PreferenceScreen android:key="recent_screen_category"
                 android:title="@string/recent_category"
                 android:fragment="com.android.settings.twistedcore.recent.RecentScreenCategory" />
 

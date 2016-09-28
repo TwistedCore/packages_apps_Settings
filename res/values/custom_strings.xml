@@ -71,6 +71,9 @@
     <string name="remove_tile_summaries_title">Remove tile summaries</string>
     <string name="remove_tile_summaries_summary">Remove tiles summaries that display underneath tile titles</string>
 
+    <!-- Display Category-->
+    <string name="display_category">Display</string> 
+
     <!-- Memory -->
     <string name="memory_startup_apps_title">Apps started on boot</string>
 
