@@ -42,7 +42,7 @@
         <!-- Recent Screen -->
         <PreferenceScreen android:key="recent_screen"
                 android:title="@string/recent_category"
-                android:fragment="com.android.settings.twistedcore.recent.RecentScreen" />
+                android:fragment="com.android.settings.twistedcore.recent.RecentScreenCategory" />
 
     </PreferenceCategory>
 
