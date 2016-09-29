@@ -35,9 +35,9 @@
                 android:title="User Interface">
 
         <!-- Clock Category -->
-        <PreferenceScreen android:key="clock_category"
-                android:title="@string/clock_category"
-                android:fragment="com.android.settings.twistedcore.statusbar.ClockCategory" />
+        <PreferenceScreen android:key="statusbar_category"
+                android:title="@string/statusbar_category"
+                android:fragment="com.android.settings.twistedcore.statusbar.StatusBarCategory" />
 
         <!-- Display Category -->
         <PreferenceScreen android:key="display_category"

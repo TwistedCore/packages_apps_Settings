@@ -17,6 +17,9 @@
     <!-- Twisted Core Settings -->
     <string name="twistedcore_title">Twisted Core</string>
 
+    <!-- Twisted Core Categories -->
+    <string name="statusbar_category">Status Bar</string>
+
     <!-- Changelog -->
     <string name="changelog_crdroid_title">Changelog</string>
     <string name="changelog_crdroid_error">Unable to load changelog</string>
