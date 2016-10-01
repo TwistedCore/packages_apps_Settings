@@ -215,8 +215,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private static final String KEY_CONVERT_FBE = "convert_to_file_encryption";
 
-    private static final String OTA_DISABLE_AUTOMATIC_UPDATE_KEY = "ota_disable_automatic_update";
-
     private static final int RESULT_DEBUG_APP = 1000;
     private static final int RESULT_MOCK_LOCATION_APP = 1001;
 
@@ -242,6 +240,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
     private boolean mDontPokeProperties;
+    private boolean mOtaDisabledOnce = false;
 
     private SwitchPreference mEnableAdb;
     private SwitchPreference mAdbNotify;
@@ -268,7 +267,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private SwitchPreference mWifiAggressiveHandover;
     private SwitchPreference mMobileDataAlwaysOn;
     private SwitchPreference mBluetoothDisableAbsVolume;
-    private SwitchPreference mOtaDisableAutomaticUpdate;
 
     private SwitchPreference mWifiAllowScansWithTraffic;
     private SwitchPreference mStrictMode;
@@ -496,8 +494,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             removePreference(KEY_CONVERT_FBE);
         }
 
-        mOtaDisableAutomaticUpdate = findAndInitSwitchPref(OTA_DISABLE_AUTOMATIC_UPDATE_KEY);
-
         updateWebViewProviderOptions();
         
         // make sure we dont leave an unremovable bugreport in power menu
@@ -505,6 +501,16 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         if (Settings.Secure.getInt(cr,
                 Settings.Secure.BUGREPORT_IN_POWER_MENU, 0) == 1) {
             Settings.Secure.putInt(cr, Settings.Secure.BUGREPORT_IN_POWER_MENU, 0);
+        }
+        /* With this commit we are removing the user switch, but this is a System API and as Google
+            says in the original commit this value is set internally (and its code is within Google services too).
+            Indeed the related frameworks base commit just publishes the String, but the main code is
+            somewhere else.
+            So, to be sure the automatic update function is really kept disabled, we are forcing it to disabled
+            (it means we are enabling the "disable automatic ota" feature) at least once in the onCreate method.*/
+        if (!mOtaDisabledOnce) {
+        Settings.Global.putInt(cr, Settings.Global.OTA_DISABLE_AUTOMATIC_UPDATE, 1);
+        mOtaDisabledOnce = true;
         }
     }
 
@@ -701,7 +707,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateAppProcessLimitOptions();
         updateShowAllANRsOptions();
         updateVerifyAppsOverUsbOptions();
-        updateOtaDisableAutomaticUpdateOptions();
         updateForceRtlOptions();
         updateLogdSizeValues();
         updateLogpersistValues();
@@ -998,24 +1003,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         Settings.Global.putInt(getActivity().getContentResolver(),
                 Settings.Global.PACKAGE_VERIFIER_INCLUDE_ADB,
                 mVerifyAppsOverUsb.isChecked() ? 1 : 0);
-    }
-
-    private void updateOtaDisableAutomaticUpdateOptions() {
-        // We use the "disabled status" in code, but show the opposite text
-        // "Automatic system updates" on screen. So a value 0 indicates the
-        // automatic update is enabled.
-        updateSwitchPreference(mOtaDisableAutomaticUpdate, Settings.Global.getInt(
-                getActivity().getContentResolver(),
-                Settings.Global.OTA_DISABLE_AUTOMATIC_UPDATE, 0) != 1);
-    }
-
-    private void writeOtaDisableAutomaticUpdateOptions() {
-        // We use the "disabled status" in code, but show the opposite text
-        // "Automatic system updates" on screen. So a value 0 indicates the
-        // automatic update is enabled.
-        Settings.Global.putInt(getActivity().getContentResolver(),
-                Settings.Global.OTA_DISABLE_AUTOMATIC_UPDATE,
-                mOtaDisableAutomaticUpdate.isChecked() ? 0 : 1);
     }
 
     private boolean enableVerifierSetting() {
@@ -2005,8 +1992,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             writeDebuggerOptions();
         } else if (preference == mVerifyAppsOverUsb) {
             writeVerifyAppsOverUsbOptions();
-        } else if (preference == mOtaDisableAutomaticUpdate) {
-            writeOtaDisableAutomaticUpdateOptions();
         } else if (preference == mStrictMode) {
             writeStrictModeVisualOptions();
         } else if (preference == mPointerLocation) {

@@ -76,10 +76,6 @@
         android:title="@string/enable_webview_multiprocess"
         android:summary="@string/enable_webview_multiprocess_desc" />
 
-    <SwitchPreference
-        android:key="ota_disable_automatic_update"
-        android:title="@string/ota_disable_automatic_update" />
-
     <PreferenceScreen
         android:key="demo_mode"
         android:title="@string/demo_mode">
