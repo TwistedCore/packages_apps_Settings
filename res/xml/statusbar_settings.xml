@@ -33,4 +33,11 @@
             android:summary="@string/network_traffic_summary"
             android:title="@string/network_traffic_title" />
 
+        <ListPreference
+            android:dialogTitle="@string/sysui_qqs_count_title"
+            android:entries="@array/sysui_qqs_count_entries"
+            android:entryValues="@array/sysui_qqs_count_values"
+            android:key="sysui_qqs_count_key"
+            android:title="@string/sysui_qqs_count_title" />
+
 </PreferenceScreen> 
