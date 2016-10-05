@@ -22,7 +22,12 @@
             android:summary="Modify clock and date"
             android:fragment="com.android.settings.twistedcore.statusbar.ClockCategory" />
 
-        <PreferenceScreen
+    <PreferenceScreen
+        android:key="status_bar_battery_style"
+        android:title="@string/status_bar_battery_style_category"
+        android:fragment="com.android.settings.twisted.StatusbarBatteryStyle" />
+
+    <PreferenceScreen
             android:key="network_traffic_state"
             android:fragment="com.android.settings.NetworkTraffic"
             android:summary="@string/network_traffic_summary"
