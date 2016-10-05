@@ -48,8 +48,10 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 public class StatusBarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
+    private static final String KEY_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
 
     private SwitchPreference mEnableNC;
+    private ListPreference mSysuiQqsCount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,15 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
         int EnableNC = Settings.System.getInt(getContentResolver(),
                 STATUS_BAR_NOTIF_COUNT, 0);
         mEnableNC.setChecked(EnableNC != 0);
+
+        mSysuiQqsCount = (ListPreference) findPreference(KEY_SYSUI_QQS_COUNT);
+        if (mSysuiQqsCount != null) {
+           mSysuiQqsCount.setOnPreferenceChangeListener(this);
+           int SysuiQqsCount = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QQS_COUNT, 5);
+           mSysuiQqsCount.setValue(Integer.toString(SysuiQqsCount));
+           mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntry());
+        }
     }
 
     @Override
@@ -83,6 +94,15 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), STATUS_BAR_NOTIF_COUNT,
                     value ? 1 : 0);
+            return true;
+       } else if (preference == mSysuiQqsCount) {
+            String SysuiQqsCount = (String) newValue;
+            int SysuiQqsCountValue = Integer.parseInt(SysuiQqsCount);
+            Settings.Secure.putInt(resolver, Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
+            int SysuiQqsCountIndex = mSysuiQqsCount
+                    .findIndexOfValue(SysuiQqsCount);
+            mSysuiQqsCount
+                    .setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
             return true;
         }
         return false;

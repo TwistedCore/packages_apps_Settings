@@ -40,4 +40,11 @@
         android:summary="@string/double_tap_sleep_anywhere_summary"
         android:defaultValue="false" />
 
+        <ListPreference
+            android:dialogTitle="@string/sysui_qqs_count_title"
+            android:entries="@array/sysui_qqs_count_entries"
+            android:entryValues="@array/sysui_qqs_count_values"
+            android:key="sysui_qqs_count_key"
+            android:title="@string/sysui_qqs_count_title" />
+
 </PreferenceScreen> 
