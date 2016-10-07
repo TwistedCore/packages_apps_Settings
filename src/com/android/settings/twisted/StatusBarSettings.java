@@ -75,7 +75,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.statusbar_settings);
-        ContentResolver resolver = getActivity().getContentResolver();
 
         final PreferenceScreen prefSet = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
@@ -146,36 +145,36 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
                     value ? 1 : 0);
             return true;
        } else if (preference == mSysuiQqsCount) {
-            String SysuiQqsCount = (String) objValue;
+            String SysuiQqsCount = (String) newValue;
             int SysuiQqsCountValue = Integer.parseInt(SysuiQqsCount);
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
             int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
             mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
             return true;
        } else if (preference == mRowsPortrait) {
-            intValue = Integer.valueOf((String) objValue);
-            index = mRowsPortrait.findIndexOfValue((String) objValue);
+            intValue = Integer.valueOf((String) newValue);
+            index = mRowsPortrait.findIndexOfValue((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.QS_ROWS_PORTRAIT, intValue);
             preference.setSummary(mRowsPortrait.getEntries()[index]);
             return true;
         } else if (preference == mColumnsPortrait) {
-            intValue = Integer.valueOf((String) objValue);
-            index = mColumnsPortrait.findIndexOfValue((String) objValue);
+            intValue = Integer.valueOf((String) newValue);
+            index = mColumnsPortrait.findIndexOfValue((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.QS_COLUMNS_PORTRAIT, intValue);
             preference.setSummary(mColumnsPortrait.getEntries()[index]);
             return true;
         } else if (preference == mRowsLandscape) {
-            intValue = Integer.valueOf((String) objValue);
-            index = mRowsLandscape.findIndexOfValue((String) objValue);
+            intValue = Integer.valueOf((String) newValue);
+            index = mRowsLandscape.findIndexOfValue((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.QS_ROWS_LANDSCAPE, intValue);
             preference.setSummary(mRowsLandscape.getEntries()[index]);
             return true;
         } else if (preference == mColumnsLandscape) {
-            intValue = Integer.valueOf((String) objValue);
-            index = mColumnsLandscape.findIndexOfValue((String) objValue);
+            intValue = Integer.valueOf((String) newValue);
+            index = mColumnsLandscape.findIndexOfValue((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.QS_COLUMNS_LANDSCAPE, intValue);
             preference.setSummary(mColumnsLandscape.getEntries()[index]);
