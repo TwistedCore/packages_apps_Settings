@@ -35,6 +35,11 @@
         android:summary="@string/battery_summary"
         android:fragment="com.android.settings.twisted.statusbar.BatterySettings" />
 
+    <Preference
+        android:key="batterybar"
+        android:title="@string/battery_bar_title"
+        android:fragment="com.android.settings.twisted.statusbar.BatteryBar" />
+
     <com.android.settings.preference.SystemSettingSwitchPreference
         android:key="bluetooth_show_battery"
         android:title="@string/bluetooth_battery_title"
