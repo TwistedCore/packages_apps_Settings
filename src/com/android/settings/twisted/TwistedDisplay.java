@@ -104,7 +104,7 @@ public class TwistedDisplay extends SettingsPreferenceFragment implements OnPref
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mKillAppLongPressBack) {
-            boolean value = (Boolean) objValue;
+            boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
                     value ? 1 : 0);
 			return true;
