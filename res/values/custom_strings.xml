@@ -36,6 +36,9 @@
     <string name="build_compiler_clang">Clang version</string>
     <string name="build_compiler_default">Unknown</string>
     
+<!-- Navigation -->
+    <string name="navigation_category">Navigation</string>
+
     <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
     <string name="local_backup_password_title">Desktop backup password</string>
 
