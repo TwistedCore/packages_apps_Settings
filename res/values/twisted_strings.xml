@@ -20,5 +20,8 @@
     <string name="build_date_default">2015-01-01-0000</string>
     <string name="twisted_version_title">Twisted version</string>
     <string name="twisted_version_default">Unknown</string>
-    
+
+    <!-- Dev Options Enabled by Default -->
+    <string name="show_dev_already_enabled">No Need, Development settings are enabled by default.</string>
+
 </resources>
