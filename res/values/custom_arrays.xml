@@ -101,6 +101,7 @@
         <item>4000</item>
         <item>4500</item>
         <item>5000</item>
+    </string-array>
 
     <!-- Expanded Desktop -->
     <string-array name="expanded_desktop_entries" translatable="false">
