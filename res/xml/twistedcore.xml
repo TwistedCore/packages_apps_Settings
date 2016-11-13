@@ -26,14 +26,14 @@
                 android:fragment="com.android.settings.crdroid.Changelog" />
 
         <PreferenceScreen
-            android:fragment="com.android.settings.twisted.TwistedDisplay"
-            android:key="twisted_display_settings"
-            android:title="@string/twisted_settings_title"/>
-
-        <PreferenceScreen
             android:fragment="com.android.settings.twisted.StatusBarSettings"
             android:key="twisted_statusbar_settings"
             android:title="@string/statusbar_settings_title"/>
+
+        <PreferenceScreen
+            android:fragment="com.android.settings.twisted.TwistedDisplay"
+            android:key="twisted_display_settings"
+            android:title="@string/twisted_settings_title"/>
 
         <PreferenceScreen
             android:fragment="com.android.settings.twisted.VolumeRockerSettings"

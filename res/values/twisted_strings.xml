@@ -25,7 +25,8 @@
 
     <!-- Display fragment -->
     <string name="twisted_settings_title">Display Options</string>
-
+    <string name="twisted_statusbar_gestures">Gestures</string>
+    <string name="twisted_statusbar_quicksettings">Quick Settings</sring>
     <!-- Changelog -->
     <string name="changelog_crdroid_title">Changelog</string>
     <string name="changelog_crdroid_error">Unable to load changelog</string>
