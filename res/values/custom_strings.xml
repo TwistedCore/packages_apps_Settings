@@ -127,5 +127,9 @@
     <string name="expanded_desktop_style">Expanded desktop style</string>
     <string name="expanded_desktop_style_description">Choose a default expanded desktop style</string>
     <string name="expanded_desktop_title">Expanded desktop options</string>
- 
+
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_layout_category">QS tiles layout</string>
+    <string name="qs_columns_title">Columns</string>
+
 </resources>
