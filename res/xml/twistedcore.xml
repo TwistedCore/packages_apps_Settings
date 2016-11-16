@@ -61,5 +61,10 @@
             android:key="lockscreen_items"
             android:title="@string/lockscreen_items_settings_title" />
 
+        <PreferenceScreen
+            android:fragment="com.android.settings.xosp.BlurPersonalizations"
+            android:key="blur_personalizations"
+            android:title="Blur" />
+
 
 </PreferenceScreen>
