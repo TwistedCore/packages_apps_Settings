@@ -23,7 +23,7 @@
 
     <color name="memory_used">#F00</color>
     <color name="memory_avail">@color/material_empty_color_light</color>
-    <color name="memory_apps_usage">#00796B</color>
+    <color name="memory_apps_usage">@*android:color/material_deep_teal_500</color><!-- Pixel blue -->
     <color name="memory_downloads">#3367D6</color>
     <color name="memory_dcim">#0097A7</color>
     <color name="memory_music">#689F38</color>
@@ -69,7 +69,7 @@
     <color name="fingerprint_indicator_background_resting">#12000000</color>
 
     <color name="running_processes_system_ram">#ff384248</color>
-    <color name="running_processes_apps_ram">#ff009587</color>
+    <color name="running_processes_apps_ram">@*android:color/material_deep_teal_500</color>
     <color name="running_processes_free_ram">#ffced7db</color>
 
     <color name="card_background">#ffffffff</color>
