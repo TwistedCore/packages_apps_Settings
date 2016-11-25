@@ -57,4 +57,11 @@
         android:summary="@string/status_bar_battery_style_tile_summary"
         android:defaultValue="false" />
 
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="status_bar_charge_color"
+        android:title="@string/status_bar_charge_color_title"
+        android:summary="@string/status_bar_charge_color_summary"
+        android:persistent="false"
+        android:defaultValue="0xffffff" />
+
 </PreferenceScreen>

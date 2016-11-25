@@ -406,5 +406,7 @@
     <string name="data_wifi_activity_arrows_title">Data/Wifi activity arrows</string>
     <string name="data_wifi_activity_arrows_summary_on">Show data/wifi activity arrows</string>
     <string name="data_wifi_activity_arrows_summary_off">Hide data/wifi activity arrows</string>
+    <string name="status_bar_charge_color_title">Statusbar battery icon charging color</string>
+    <string name="status_bar_charge_color_summary">Set the color of the statusbar battery icon while charging</string>
 
 </resources>

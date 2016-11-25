@@ -22,6 +22,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.TrafficStats;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -53,6 +54,7 @@ public class BatterySettings extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE_TILE = "status_bar_battery_style_tile";
+    private static final String STATUS_BAR_CHARGE_COLOR = "status_bar_charge_color";
     private static final String FORCE_CHARGE_BATTERY_TEXT = "force_charge_battery_text";
     private static final String TEXT_CHARGING_SYMBOL = "text_charging_symbol";
 
@@ -61,6 +63,7 @@ public class BatterySettings extends SettingsPreferenceFragment implements
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
 
+    private ColorPickerPreference mChargeColor;
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarBatteryShowPercent;
     private int mStatusBarBatteryValue;
@@ -90,7 +93,7 @@ public class BatterySettings extends SettingsPreferenceFragment implements
 
         mForceChargeBatteryText = (SwitchPreference) findPreference(FORCE_CHARGE_BATTERY_TEXT);
         mForceChargeBatteryText.setChecked((Settings.Secure.getInt(resolver,
-                Settings.Secure.FORCE_CHARGE_BATTERY_TEXT, 1) == 1));
+                Settings.Secure.FORCE_CHARGE_BATTERY_TEXT, 0) == 1));
         mForceChargeBatteryText.setOnPreferenceChangeListener(this);
 
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
@@ -99,6 +102,12 @@ public class BatterySettings extends SettingsPreferenceFragment implements
         mStatusBarBattery.setValue(Integer.toString(mStatusBarBatteryValue));
         mStatusBarBattery.setSummary(mStatusBarBattery.getEntry());
         mStatusBarBattery.setOnPreferenceChangeListener(this);
+
+        int chargeColor = Settings.Secure.getInt(resolver,
+                Settings.Secure.STATUS_BAR_CHARGE_COLOR, Color.WHITE);
+        mChargeColor = (ColorPickerPreference) findPreference("status_bar_charge_color");
+        mChargeColor.setNewPreviewColor(chargeColor);
+        mChargeColor.setOnPreferenceChangeListener(this);
 
         mStatusBarBatteryShowPercent =
                 (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
@@ -156,6 +165,11 @@ public class BatterySettings extends SettingsPreferenceFragment implements
                     Settings.Secure.FORCE_CHARGE_BATTERY_TEXT, checked ? 1:0);
             //enableStatusBarBatteryDependents();
             return true;
+        } else if (preference.equals(mChargeColor)) {
+            int color = ((Integer) newValue).intValue();
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.STATUS_BAR_CHARGE_COLOR, color);
+            return true;
         } else if (preference == mTextChargingSymbol) {
             mTextChargingSymbolValue = Integer.valueOf((String) newValue);
             int index = mTextChargingSymbol.findIndexOfValue((String) newValue);
@@ -173,15 +187,18 @@ public class BatterySettings extends SettingsPreferenceFragment implements
             mStatusBarBatteryShowPercent.setEnabled(false);
             mQsBatteryTitle.setEnabled(false);
             mForceChargeBatteryText.setEnabled(false);
+            mChargeColor.setEnabled(false);
             mTextChargingSymbol.setEnabled(false);
         } else if (mStatusBarBatteryValue == STATUS_BAR_BATTERY_STYLE_TEXT) {
             mStatusBarBatteryShowPercent.setEnabled(false);
             mQsBatteryTitle.setEnabled(false);
             mForceChargeBatteryText.setEnabled(false);
+            mChargeColor.setEnabled(false);
             mTextChargingSymbol.setEnabled(true);
         } else if (mStatusBarBatteryValue == STATUS_BAR_BATTERY_STYLE_PORTRAIT) {
             mStatusBarBatteryShowPercent.setEnabled(true);
             mQsBatteryTitle.setEnabled(false);
+            mChargeColor.setEnabled(true);
             mForceChargeBatteryText.setEnabled(mStatusBarBatteryShowPercentValue == 2 ? false : true);
             //relying on the mForceChargeBatteryText isChecked state is glitchy
             //you need to click it twice to update the mTextChargingSymbol setEnabled state
@@ -193,6 +210,8 @@ public class BatterySettings extends SettingsPreferenceFragment implements
         } else {
             mStatusBarBatteryShowPercent.setEnabled(true);
             mQsBatteryTitle.setEnabled(true);
+            mChargeColor.setEnabled(true);
+            mForceChargeBatteryText.setEnabled(mStatusBarBatteryShowPercentValue == 2 ? false : true);
             //mTextChargingSymbol.setEnabled((mStatusBarBatteryShowPercentValue == 0 && !mForceChargeBatteryText.isChecked())
             //|| (mStatusBarBatteryShowPercentValue == 1 && !mForceChargeBatteryText.isChecked()) ? false : true);
             mTextChargingSymbol.setEnabled(true);
