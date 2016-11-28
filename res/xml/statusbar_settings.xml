@@ -40,6 +40,13 @@
         android:summary="@string/status_bar_notif_count_summary"
         android:persistent="false" />
 
+     <com.android.settings.preference.SystemSettingSwitchPreferencee
+            android:key="qs_tile_title_visibility"
+            android:title="@string/qs_tile_title_visibility_title"
+            android:summaryOn="@string/qs_tile_title_visibility_summary_on"
+            android:summaryOff="@string/qs_tile_title_visibility_summary_off"
+            android:defaultValue="true"/>
+
         <com.android.settings.preference.CustomSeekBarPreference
             android:key="qs_layout_columns"
             android:title="@string/qs_columns_title"
