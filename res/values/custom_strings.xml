@@ -19,12 +19,22 @@
     <!-- ROM version -->
     <string name="rom_version">Twisted version</string>
     <string name="rom_version_default">Unknown</string>
+    
     <!-- Vendor version -->
     <string name="vendor_version">Vendor version</string>
     <string name="vendor_version_default">Unknown</string>
+    
     <!-- Model Name -->
     <string name="model_name">Model name</string>
     
+    <!-- GCC Compiler -->
+    <string name="build_compiler_gcc">GCC version</string>
+    <string name="build_compiler_default">Unknown</string>
+    
+    <!-- Clang Compiler -->
+    <string name="build_compiler_clang">Clang version</string>
+    <string name="build_compiler_default">Unknown</string>
+
     <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic</string>
     <string name="show_network_traffic_state">Status bar traffic monitor</string>
