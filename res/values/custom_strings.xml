@@ -392,4 +392,8 @@
     <string name="qs_date_time_center_title">Center Date and Time</string>
     <string name="qs_date_time_center_summary">Requires one or more icons to be disabled</string>
 
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Screenshot sound</string>
+    <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+
 </resources>
