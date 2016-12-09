@@ -49,7 +49,7 @@
 
     <!-- Status bar - Clock -->
     <string name="clock_category">Clock</string>
-
+    <string name="clock_summary">Enable various clock options in statusbar</string>
     <string name="status_bar_clock_title">Clock settings</string>
     <string name="status_bar_clock_style_title">Clock style</string>
     <string name="status_bar_clock_style_right">Right</string>

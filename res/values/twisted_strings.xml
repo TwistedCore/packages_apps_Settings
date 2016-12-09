@@ -121,6 +121,7 @@
 
     <!-- Battery customizations -->
     <string name="status_bar_battery_style_category">Battery</string>
+    <string name="battery_summary">Enable various battery options in statusbar</string>
     <string name="status_bar_battery_style_title">Battery status style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
     <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
