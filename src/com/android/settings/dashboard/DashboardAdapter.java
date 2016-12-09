@@ -108,37 +108,21 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
     public List<Tile> getSuggestions() {
         if ((Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DISABLE_SUGGESTIONS, 0) == 1)) {
-             return null;
-        } else {
+                    Settings.System.DISABLE_SUGGESTIONS, 1) == 1)) {
              return mSuggestions;
-        }
-    }
-
-    public void setSuggestions(List<Tile> suggestions) {
-        if ((Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DISABLE_SUGGESTIONS, 0) == 1)) {
-             mSuggestions = null;
-             recountItems();
         } else {
+             return null;
+        }
+    }
+
+    public void setCategoriesAndSuggestions(List<DashboardCategory> categories,
+            List<Tile> suggestions) {
+        if ((Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.DISABLE_SUGGESTIONS, 1) == 1)) {
              mSuggestions = suggestions;
-             recountItems();
+        } else {
+             mSuggestions = null;
         }
-    }
-
-    public Tile getTile(ComponentName component) {
-        for (int i = 0; i < mCategories.size(); i++) {
-            for (int j = 0; j < mCategories.get(i).tiles.size(); j++) {
-                Tile tile = mCategories.get(i).tiles.get(j);
-                if (component.equals(tile.intent.getComponent())) {
-                    return tile;
-                }
-            }
-        }
-        return null;
-    }
-
-    public void setCategories(List<DashboardCategory> categories) {
         mCategories = categories;
 
         // TODO: Better place for tinting?

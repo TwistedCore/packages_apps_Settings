@@ -134,6 +134,4 @@
                 android:summary="@string/remove_tile_summaries_summary"
                 android:defaultValue="false" />
 
-        </PreferenceCategory>
-
 </PreferenceScreen>
