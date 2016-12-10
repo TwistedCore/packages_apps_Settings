@@ -106,9 +106,10 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+            ContentResolver resolver = getActivity().getContentResolver();
         if  (preference == mEnableNC) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(), STATUS_BAR_NOTIF_COUNT,
+            Settings.System.putInt(resolver, STATUS_BAR_NOTIF_COUNT,
                     value ? 1 : 0);
             return true;
         } else if (preference == mQsColumns) {
