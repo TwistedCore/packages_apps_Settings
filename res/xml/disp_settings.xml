@@ -18,6 +18,12 @@
     android:title="@string/display_settings_title">
 
     <PreferenceScreen
+        android:key="expanded_desktop"
+        android:title="@string/power_menu_expanded_desktop"
+        android:summary="@string/expanded_summary"
+        android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+
+    <PreferenceScreen
         android:fragment="com.android.settings.twisted.LockScreenItemsSettings"
         android:key="lockscreen_items"
         android:summary="@string/lockscreen_display_options"
