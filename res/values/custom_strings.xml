@@ -161,6 +161,7 @@
     <string name="qs_tile_title_visibility_title">QS tile titles</string>
     <string name="qs_tile_title_visibility_summary_on">QS tile titles are on</string>
     <string name="qs_tile_title_visibility_summary_off">QS tile titles are off</string>
+    <string name="qs_small_tiles_title">Small QS tiles</string>
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
