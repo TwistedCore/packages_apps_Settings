@@ -53,4 +53,10 @@
             android:title="@string/kill_app_longpress_back"
             android:summary="@string/kill_app_longpress_back_summary"/>
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="double_tap_wake_doze"
+            android:title="@string/double_tap_wake_doze_title"
+            android:summary="@string/double_tap_wake_doze_summary"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
