@@ -59,7 +59,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
     private CustomSeekBarPreference mQsColumns;
     private CustomSeekBarPreference mRowsPortrait;
     private CustomSeekBarPreference mRowsLandscape;
-    private CustomSeekBarPreference mSysuiQqsCount
+    private CustomSeekBarPreference mSysuiQqsCount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
