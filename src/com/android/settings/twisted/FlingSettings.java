@@ -29,8 +29,8 @@ import com.android.internal.utils.du.ActionHandler;
 import com.android.internal.utils.du.DUActionUtils;
 import com.android.internal.utils.du.Config.ButtonConfig;
 import com.android.settings.R;
-import com.flash.settings.IconPickHelper;
-import com.flash.settings.preferences.ActionPreference;
+import com.android.settings.IconPickHelper;
+import com.android.settings.preference.ActionPreference;
 
 import android.app.ActionBar;
 import android.content.Context;
@@ -359,6 +359,6 @@ public class FlingSettings extends ActionFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.FLASH;
+        return MetricsEvent.TWISTED;
     }
 }

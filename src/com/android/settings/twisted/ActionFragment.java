@@ -29,9 +29,9 @@ import com.android.internal.utils.du.Config;
 import com.android.internal.utils.du.Config.ActionConfig;
 import com.android.internal.utils.du.Config.ButtonConfig;
 
-import com.flash.settings.ShortcutPickHelper;
-import com.flash.settings.preferences.ActionPreference;
-import com.flash.settings.CustomActionListAdapter;
+import com.android.settings.ShortcutPickHelper;
+import com.android.settings.preference.ActionPreference;
+import com.android.settings.CustomActionListAdapter;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -242,6 +242,6 @@ public class ActionFragment extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.FLASH;
+        return MetricsEvent.TWISTED;
     }
 }

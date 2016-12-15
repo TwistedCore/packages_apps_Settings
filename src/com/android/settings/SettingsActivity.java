@@ -135,10 +135,10 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
-import com.flash.settings.fragments.FlingSettings;
-import com.flash.settings.fragments.NavbarSettings;
-import com.flash.settings.fragments.SmartbarSettings;
-import com.flash.settings.fragments.PulseSettings;
+import com.android.settings.twisted.FlingSettings;
+import com.android.settings.twisted.NavbarSettings;
+import com.android.settings.twisted.SmartbarSettings;
+import com.android.settings.twisted.PulseSettings;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
