@@ -2874,7 +2874,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.flash.settings.fragments.NavbarSettings" />
+                android:value="com.android.settings.twisted.NavbarSettings" />
         </activity>
 
         <!-- Smartbar settings activity. -->
@@ -2886,7 +2886,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.flash.settings.fragments.SmartbarSettings" />
+                android:value="com.android.settings.twisted.SmartbarSettings" />
         </activity>
 
         <!-- Fling settings activity. -->
@@ -2898,7 +2898,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.flash.settings.fragments.FlingSettings" />
+                android:value="com.android.settings.twisted.FlingSettings" />
         </activity>
 
         <!-- Pulse settings activity. -->
@@ -2910,11 +2910,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.flash.settings.fragments.PulseSettings" />
+                android:value="com.android.settings.twisted.PulseSettings" />
         </activity>
 
        <!-- System action picker -->
-        <activity android:name="com.flash.settings.ActionPickerDialogActivity"
+        <activity android:name="com.android.settings.ActionPickerDialogActivity"
                 android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
                 android:label="@string/choose_action_title"
                 android:excludeFromRecents="true">
@@ -2924,7 +2924,7 @@
         </activity>
 
        <!-- Icon pack picker -->
-        <activity android:name="com.flash.settings.IconPickerActivity"
+        <activity android:name="com.android.settings.IconPickerActivity"
                 android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
                 android:label="@string/icon_pack_picker_dialog_title"
                 android:excludeFromRecents="true">
@@ -2935,7 +2935,7 @@
 
 
         <!-- Icon picker proxy for gallery -->
-        <activity android:name="com.flash.settings.IconPickerGallery"
+        <activity android:name="com.android.settings.IconPickerGallery"
             android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
             android:label="@string/icon_pack_picker_dialog_title"
             android:excludeFromRecents="true">
@@ -2945,7 +2945,7 @@
         </activity>
 
        <!-- Icon pack grid -->
-        <activity android:name="com.flash.settings.IconPackGridActivity"
+        <activity android:name="com.android.settings.IconPackGridActivity"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
