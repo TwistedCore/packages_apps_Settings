@@ -122,13 +122,6 @@
                 android:title="@string/build_compiler_clang"
                 android:summary="@string/build_compiler_default" />
 
-        <!-- Vendor Version -->
-        <Preference android:key="vendor_version"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:title="@string/vendor_version"
-                android:summary="@string/vendor_version_default" />
-
         <!-- SELinux status information -->
         <com.android.settings.DividerPreference
                 android:key="selinux_status"
