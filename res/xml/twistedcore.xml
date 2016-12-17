@@ -50,4 +50,9 @@
             android:key="flash_navbar_settings"
             android:title="@string/navbar_settings_title"/>
 
+        <PreferenceScreen
+            android:fragment="com.android.settings.twisted.TilesSettings"
+            android:key="twisted_tiles_settings"
+            android:title="@string/tiles_settings_title"/>
+
 </PreferenceScreen>

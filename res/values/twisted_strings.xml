@@ -27,6 +27,9 @@
     <!-- Power Menu fragment -->
     <string name="powermenu_settings_title">Power menu</string>
 
+    <!-- Tiles fragment -->
+    <string name="tiles_settings_title">Qs Tiles extras</string>
+
     <!-- Display fragment -->
     <string name="twisted_settings_title">Display Options</string>
 
