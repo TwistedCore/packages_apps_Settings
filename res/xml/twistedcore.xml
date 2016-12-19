@@ -55,4 +55,11 @@
             android:key="twisted_tiles_settings"
             android:title="@string/tiles_settings_title"/>
 
+
+        <PreferenceScreen
+            android:fragment="com.android.settings.twisted.LockScreenItemsSettings"
+            android:key="lockscreen_items"
+            android:title="@string/lockscreen_items_settings_title" />
+
+
 </PreferenceScreen>

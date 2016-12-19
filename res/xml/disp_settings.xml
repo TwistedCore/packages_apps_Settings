@@ -23,12 +23,6 @@
         android:summary="@string/expanded_summary"
         android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
-    <PreferenceScreen
-        android:fragment="com.android.settings.twisted.LockScreenItemsSettings"
-        android:key="lockscreen_items"
-        android:summary="@string/lockscreen_display_options"
-        android:title="@string/lockscreen_items_settings_title" />
-
         <ListPreference
             android:key="pref_scrollingcache"
             android:dialogTitle="@string/pref_scrollingcache_title"
@@ -41,12 +35,6 @@
             android:key="status_bar_brightness_control"
             android:summary="@string/status_bar_brightness_control_summary"
             android:title="@string/status_bar_brightness_control_title" />
-
-        <com.android.settings.preference.SystemSettingSwitchPreference
-            android:key="lockscreen_battery_info"
-            android:title="@string/lockscreen_battery_info_title"
-            android:summary="@string/lockscreen_battery_info_summary"
-            android:defaultValue="false" />
 
         <SwitchPreference
             android:key="kill_app_longpress_back"
