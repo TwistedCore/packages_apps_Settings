@@ -5726,9 +5726,9 @@
     <!-- Help URL, Data usage [DO NOT TRANSLATE] -->
     <string name="help_url_data_usage" translatable="false"></string>
     <!-- Help URL, Data saver [DO NOT TRANSLATE] -->
-    <string name="help_url_data_saver" translatable="false"></string>
+    <string name="help_url_data_saver" translatable="false">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_datasaver;S.EXTRA_BACKUP_URI=https%3A%2F%2Fsupport.google.com%2Fmobile%2F%3Fp%3Dsettings_datasaver;end</string>
     <!-- Help URL, Unrestricted data access [DO NOT TRANSLATE] -->
-    <string name="help_url_unrestricted_data_access" translatable="false"></string>
+    <string name="help_url_unrestricted_data_access" translatable="false">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_unrestricted_data_access;S.EXTRA_BACKUP_URI=https%3A%2F%2Fsupport.google.com%2Fmobile%2F%3Fp%3Dsettings_unrestricted_data_access;end</string>
     <!-- Help URL, More [DO NOT TRANSLATE] -->
     <string name="help_url_more_networks" translatable="false"></string>
     <!-- Help URL, Vpn [DO NOT TRANSLATE] -->
@@ -5760,11 +5760,11 @@
     <!-- Help URL, Fingerprint [DO NOT TRANSLATE] -->
     <string name="help_url_fingerprint" translatable="false"></string>
     <!-- Help URL, Gesture settings -->
-    <string name="help_url_gestures" translatable="false"></string>
+    <string name="help_url_gestures" translatable="false">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_gestures;S.EXTRA_BACKUP_URI=https%3A%2F%2Fsupport.google.com%2Fmobile%2F%3Fp%3Dsettings_gestures;end</string>
     <!-- Help URL, Manage Storage [DO NOT TRANSLATE]-->
-    <string name="help_url_manage_storage" translatable="false"></string>
+    <string name="help_url_manage_storage" translatable="false">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_manage_storage;end</string>
     <!-- Help URL, Android is upgrading [DO NOT TRANSLATE] -->
-    <string name="help_url_upgrading" translatable="false"></string>
+    <string name="help_url_upgrading" translatable="false">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_upgrading;end</string>
 
     <!-- User account title [CHAR LIMIT=30] -->
     <string name="user_account_title">Account for content</string>
