@@ -35,11 +35,13 @@ public class NetworkTraffic extends SettingsPreferenceFragment
     private static final String NETWORK_TRAFFIC_UNIT = "network_traffic_unit";
     private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
     private static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
+    private static final String DATA_WIFI_ACTIVITY_ARROWS = "data_activity_arrows";
 
     private ListPreference mNetTrafficState;
     private ListPreference mNetTrafficUnit;
     private ListPreference mNetTrafficPeriod;
     private SwitchPreference mNetTrafficAutohide;
+    private SwitchPreference mDataWifiActivityArrows;
 
     private int mNetTrafficVal;
     private int MASK_UP;
@@ -89,6 +91,12 @@ public class NetworkTraffic extends SettingsPreferenceFragment
             mNetTrafficPeriod.setValueIndex(intIndex >= 0 ? intIndex : 1);
             mNetTrafficPeriod.setSummary(mNetTrafficPeriod.getEntry());
             mNetTrafficPeriod.setOnPreferenceChangeListener(this);
+
+        mDataWifiActivityArrows =
+               (SwitchPreference) findPreference(DATA_WIFI_ACTIVITY_ARROWS);
+        mDataWifiActivityArrows.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.DATA_ACTIVITY_ARROWS, 0) == 1));
+        mDataWifiActivityArrows.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -139,6 +147,11 @@ public class NetworkTraffic extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE, value ? 1 : 0);
+            return true;
+        } else if  (preference == mDataWifiActivityArrows) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.DATA_ACTIVITY_ARROWS, value ? 1:0);
             return true;
         }
         return false;
