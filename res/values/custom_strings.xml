@@ -106,7 +106,9 @@
     <string name="disable_suggestions_summary">Disable the suggestions that appear on top of the dashboard</string>
     <string name="remove_tile_summaries_title">Remove tile summaries</string>
     <string name="remove_tile_summaries_summary">Remove tiles summaries that display underneath tile titles</string>
-
+    <string name="show_settings_drawer_title">Show settings drawer</string>
+    <string name="show_settings_drawer_enabled">Settings drawer enabled</string>
+    <string name="show_settings_drawer_disabled">Settings drawer disabled</string>
     <!-- Lockscreen items clock, date, alarm text -->
     <string name="lockscreen_items_settings_title">Lockscreen Items</string>
     <string name="lockscreen_display_options">options to change lockscreen display</string>
