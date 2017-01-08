@@ -52,10 +52,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements OnPre
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "1";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
-    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
 
-    private SwitchPreference mKillAppLongPressBack;
+
     private ListPreference mScrollingCachePref;
     private SwitchPreference mStatusBarBrightnessControl;
     private ListPreference mRecentsClearAllLocation;
@@ -71,13 +70,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements OnPre
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
-
-        // kill-app long press back
-        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
-        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
-        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
-                KILL_APP_LONGPRESS_BACK, 0);
-        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
 
         // clear all recents
         mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
@@ -114,12 +106,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements OnPre
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mKillAppLongPressBack) {
-            boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
-                    value ? 1 : 0);
-			return true;
-        } else if (preference == mStatusBarBrightnessControl) {
+         if (preference == mStatusBarBrightnessControl) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), STATUS_BAR_BRIGHTNESS_CONTROL,
                     value ? 1 : 0);
