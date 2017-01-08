@@ -53,10 +53,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements OnPre
     private static final String SCROLLINGCACHE_DEFAULT = "1";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
 
     private SwitchPreference mKillAppLongPressBack;
     private ListPreference mScrollingCachePref;
     private SwitchPreference mStatusBarBrightnessControl;
+    private ListPreference mRecentsClearAllLocation;
+    private SwitchPreference mRecentsClearAll;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,6 +78,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements OnPre
         int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
                 KILL_APP_LONGPRESS_BACK, 0);
         mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
+
+        // clear all recents
+        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
+        int location = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
+        mRecentsClearAllLocation.setValue(String.valueOf(location));
+        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
 
         mStatusBarBrightnessControl = (SwitchPreference) findPreference(STATUS_BAR_BRIGHTNESS_CONTROL);
         mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
@@ -112,6 +123,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements OnPre
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), STATUS_BAR_BRIGHTNESS_CONTROL,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mRecentsClearAllLocation) {
+            int location = Integer.valueOf((String) newValue);
+            int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
+            mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
             return true;
         } else if (preference == mScrollingCachePref) {
             if (newValue != null) {
