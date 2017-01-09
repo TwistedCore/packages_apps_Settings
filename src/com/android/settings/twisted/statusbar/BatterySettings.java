@@ -43,7 +43,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
-
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import java.util.List;
 import java.util.ArrayList;
 
