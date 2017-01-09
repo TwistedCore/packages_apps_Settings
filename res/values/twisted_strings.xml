@@ -23,24 +23,41 @@
     <!-- Twisted Core Settings -->
     <string name="twistedcore_title">Twisted Core</string>
 
-    <!-- Volume Rocker fragment -->
-    <string name="volumerocker_settings_title">Volume rocker</string>
-
-    <!-- StatusBar fragment -->
-    <string name="statusbar_settings_title">Statusbar</string>
-
-    <!-- Power Menu fragment -->
-    <string name="powermenu_settings_title">Power menu</string>
-
-    <!-- Tiles fragment -->
-    <string name="tiles_settings_title">Qs Tiles extras</string>
-
-    <!-- Display fragment -->
-    <string name="twisted_settings_title">Display Options</string>
-
-    <!-- Changelog -->
+    <!-- Changelog fragment -->
     <string name="changelog_crdroid_title">Changelog</string>
     <string name="changelog_crdroid_error">Unable to load changelog</string>
+
+    <!-- StatusBar fragment -->
+    <string name="statusbar_twisted_title">Statusbar</string>
+    <string name="statusbar_twisted_summary">Modify: Battery, Clock, Network traffic, and more.</string>
+
+    <!-- Display fragment -->
+    <string name="display_twisted_title">Display</string>
+    <string name="display_twisted_summary">Modify: Expanded desktop, Gestures, Scrolling cache, and more.</string>
+
+    <!-- Navgationbar fragment -->
+    <string name="navigationbar_twisted_title">Navigationbar</string>
+    <string name="navigationbar_twisted_summary">Modify: Interface mode (e.g., Smartbar, Fling), Pulse, and more.</string>
+
+    <!-- Blur fragment -->
+    <string name="blur_twisted_title">Blur </string>
+    <string name="blur_twisted_summary">Modify: Expanded Statusbar, Quick Settings, Recents, and more.</string>
+
+    <!-- Keyguard fragment -->
+    <string name="keyguard_twisted_title">Keyguard </string>
+    <string name="keyguard_twisted_summary">Modify: Items on lockscreen, Clock font, and more.</string>
+
+    <!-- Power Menu fragment -->
+    <string name="powermenu_twisted_title">Power menu</string>
+    <string name="powermenu_twisted_summary">Modify: Items on power menu dialog.</string>
+
+    <!-- Quick Settings fragment -->
+    <string name="quicksettings_twisted_title">Quicksettings</string>
+    <string name="quicksettings_twisted_summary">Modify: Notification header, Gestures, Tiles (e.g., Columns, Rows, etc), and more.</string>
+
+    <!-- Volume Rocker fragment -->
+    <string name="volumerocker_twisted_title">Volume rocker</string>
+    <string name="volumerocker_twisted_summary">Modify: Different actions for volume buttons.</string>
 
     <!-- Volume settings - Volume adjustment sound -->
     <string name="volume_adjust_sounds_title">Volume adjustment sounds</string>

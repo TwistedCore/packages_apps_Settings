@@ -17,7 +17,7 @@
  * class that holds target widget state
  */
 
-package com.android.settings.twisted;
+package com.android.settings.twisted.helpers;
 
 import java.util.ArrayList;
 

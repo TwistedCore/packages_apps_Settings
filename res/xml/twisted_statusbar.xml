@@ -13,7 +13,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceScreen
@@ -26,13 +27,13 @@
         android:key="status_bar_clock"
         android:title="@string/clock_category"
         android:summary="@string/clock_summary"
-        android:fragment="com.android.settings.twistedcore.statusbar.ClockCategory" />
+        android:fragment="com.android.settings.twisted.statusbar.ClockSettings" />
 
     <PreferenceScreen
         android:key="status_bar_battery_style"
         android:title="@string/status_bar_battery_style_category"
         android:summary="@string/battery_summary"
-        android:fragment="com.android.settings.twisted.StatusbarBatteryStyle" />
+        android:fragment="com.android.settings.twisted.statusbar.BatterySettings" />
 
     <com.android.settings.preference.SystemSettingSwitchPreference
         android:key="bluetooth_show_battery"

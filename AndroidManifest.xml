@@ -2423,7 +2423,7 @@
         />
 
         <!-- Twisted Core -->
-        <activity android:name="Settings$TwistedCoreSettingsActivity"
+        <activity android:name="Settings$TwistedSettingsActivity"
                 android:label="@string/twistedcore_title"
                 android:icon="@drawable/ic_settings_twisted">
             <intent-filter android:priority="1">
@@ -2433,7 +2433,7 @@
             <meta-data android:name="com.android.settings.category"
                 android:value="com.android.settings.category.system" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.twistedcore.TwistedCoreSettings" />
+                android:value="com.android.settings.twisted.TwistedSettings" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
@@ -2874,7 +2874,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.twisted.NavbarSettings" />
+                android:value="com.android.settings.twisted.navigationbar.NavbarSettings" />
         </activity>
 
         <!-- Smartbar settings activity. -->
@@ -2886,7 +2886,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.twisted.SmartbarSettings" />
+                android:value="com.android.settings.twisted.navigationbar.SmartbarSettings" />
         </activity>
 
         <!-- Fling settings activity. -->
@@ -2898,7 +2898,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.twisted.FlingSettings" />
+                android:value="com.android.settings.twisted.navigationbar.FlingSettings" />
         </activity>
 
         <!-- Pulse settings activity. -->
@@ -2910,7 +2910,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.twisted.PulseSettings" />
+                android:value="com.android.settings.twisted.navigationbar.PulseSettings" />
         </activity>
 
        <!-- System action picker -->

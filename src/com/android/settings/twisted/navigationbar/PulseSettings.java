@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.twisted;
+package com.android.settings.twisted.navigationbar;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;

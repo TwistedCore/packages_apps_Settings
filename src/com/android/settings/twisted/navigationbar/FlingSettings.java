@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.twisted;
+package com.android.settings.twisted.navigationbar;
 
 import java.util.ArrayList;
 
@@ -46,6 +46,8 @@ import android.support.v7.preference.PreferenceCategory;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.widget.Toast;
+
+import com.android.settings.twisted.helpers.ActionFragment;
 
 public class FlingSettings extends ActionFragment implements
         Preference.OnPreferenceChangeListener, IconPickHelper.OnPickListener {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.twistedcore.statusbar;
+package com.android.settings.twisted.statusbar;
 
 import android.app.ActivityManager;
 import android.app.AlertDialog;
@@ -43,7 +43,7 @@ import com.android.settings.Utils;
 
 import java.util.Date;
 
-public class ClockCategory extends SettingsPreferenceFragment implements
+public class ClockSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
@@ -71,7 +71,7 @@ public class ClockCategory extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.twistedcore_clock);
+        addPreferencesFromResource(R.xml.twisted_clock);
 
         ContentResolver resolver = getActivity().getContentResolver();
 

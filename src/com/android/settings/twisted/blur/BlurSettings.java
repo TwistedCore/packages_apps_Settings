@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.xosp;
+package com.android.settings.twisted.blur;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -44,10 +44,10 @@ import java.util.List;
 import java.util.Map;
 
 //import cyanogenmod.providers.CMSettings;
-import com.android.settings.xosp.CustomSeekBarPreference;
+import com.android.settings.twisted.preference.CustomSeekBarPreference;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class BlurPersonalizations extends SettingsPreferenceFragment
+public class BlurSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
 //Switch Preferences
@@ -76,7 +76,7 @@ public class BlurPersonalizations extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.xosp_blur_cat);
+        addPreferencesFromResource(R.xml.twisted_blur);
         PreferenceScreen prefSet = getPreferenceScreen();
 
         ContentResolver resolver = getActivity().getContentResolver();

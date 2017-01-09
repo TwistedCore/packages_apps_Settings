@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.twisted;
+package com.android.settings.twisted.powermenu;
 
 import android.content.Context;
 import android.content.Intent;
@@ -60,7 +60,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.powermenu_settings);
+        addPreferencesFromResource(R.xml.twisted_powermenu);
         mContext = getActivity().getApplicationContext();
         PreferenceScreen prefScreen = getPreferenceScreen();
 

@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.android.settings.xosp;
+package com.android.settings.twisted.preference;
 
 import android.content.Context;
 import android.content.res.TypedArray;

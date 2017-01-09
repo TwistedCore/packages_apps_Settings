@@ -17,7 +17,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="Blur Options">
+    android:title="@string/blur_twisted_title">
+
+        <Preference
+            style="?android:preferenceInformationStyle"
+            android:title="@string/blur_notice"
+            android:summary="@string/blur_notice_summary"
+            android:selectable="false" />
+
 
     <PreferenceCategory
         android:key="blur_colors_cat"
@@ -50,19 +57,13 @@
         android:key="blur_expstatus_cat"
         android:title="@string/blur_expstatus_cat" >
 
-        <Preference
-            style="?android:preferenceInformationStyle"
-            android:title="@string/blur_notice"
-            android:summary="@string/blur_notice_summary"
-            android:selectable="false" />
-
         <SwitchPreference
             android:key="blurred_status_bar_expanded_enabled_pref"
             android:title="@string/blurred_status_bar_expanded_enabled_pref"
             android:summary="@string/blurred_status_bar_expanded_enabled_pref_summary"
             android:defaultValue="false" />
 
-        <com.android.settings.xosp.CustomSeekBarPreference
+        <com.android.settings.twisted.preference.CustomSeekBarPreference
             android:key="statusbar_blur_scale"
             android:title="@string/blurred_scale"
             android:summary="@string/blurred_scale_summary"
@@ -71,7 +72,7 @@
             android:dependency="blurred_status_bar_expanded_enabled_pref"
             android:defaultValue="10" />
 
-        <com.android.settings.xosp.CustomSeekBarPreference
+        <com.android.settings.twisted.preference.CustomSeekBarPreference
             android:key="statusbar_blur_radius"
             android:title="@string/blurred_radius"
             android:summary="@string/blurred_radius_summary"
@@ -80,25 +81,6 @@
             android:dependency="blurred_status_bar_expanded_enabled_pref"
             android:defaultValue="5" />
     </PreferenceCategory>
-
-    <!--<PreferenceCategory
-        android:key="blur_notifications_cat"
-        android:title="@string/blur_notifications_cat" >   
-
-        <SwitchPreference
-            android:key="translucent_notifications_pref"
-            android:title="@string/translucent_notifications_pref"
-            android:summary="@string/translucent_notifications_pref_summary"
-            android:defaultValue="false" />
-
-        <com.android.settings.xosp.CustomSeekBarPreference
-            android:key="notifications_transluency"
-            android:title="@string/transluency_level_universal"
-            settings:max="100"
-            settings:min="0"
-            android:dependency="translucent_notifications_pref"
-            android:defaultValue="60" />
-    </PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="blur_qs_cat"
@@ -110,7 +92,7 @@
             android:summary="@string/translucent_quick_settings_pref_summary"
             android:defaultValue="false" />
 
-        <com.android.settings.xosp.CustomSeekBarPreference
+        <com.android.settings.twisted.preference.CustomSeekBarPreference
             android:key="quick_settings_transluency"
             android:title="@string/transluency_level_universal"
             settings:max="100"
@@ -129,7 +111,7 @@
             android:summary="@string/blurred_recent_app_enabled_pref_summary"
             android:defaultValue="false" />
 
-        <com.android.settings.xosp.CustomSeekBarPreference
+        <com.android.settings.twisted.preference.CustomSeekBarPreference
             android:key="recents_blur_scale"
             android:title="@string/blurred_scale"
             android:summary="@string/blurred_scale_summary"
@@ -138,7 +120,7 @@
             android:dependency="blurred_recent_app_enabled_pref"
             android:defaultValue="6" />
 
-        <com.android.settings.xosp.CustomSeekBarPreference
+        <com.android.settings.twisted.preference.CustomSeekBarPreference
             android:key="recents_blur_radius"
             android:title="@string/blurred_radius"
             android:summary="@string/blurred_radius_summary"

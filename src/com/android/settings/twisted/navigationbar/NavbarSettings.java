@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.twisted;
+package com.android.settings.twisted.navigationbar;
 
 import java.util.ArrayList;
 
@@ -69,7 +69,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.navbar_settings);
+        addPreferencesFromResource(R.xml.twisted_navbar);
 
         mNavInterface = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_INTERFACE);
         mNavGeneral = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_GENERAL);

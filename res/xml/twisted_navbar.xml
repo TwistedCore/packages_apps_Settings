@@ -41,12 +41,12 @@
         <PreferenceScreen
             android:key="smartbar_settings"
             android:title="@string/smartbar_settings_title"
-            android:fragment="com.android.settings.twisted.SmartbarSettings" />
+            android:fragment="com.android.settings.twisted.navigationbar.SmartbarSettings" />
 
         <PreferenceScreen
             android:key="fling_settings"
             android:title="@string/fling_settings"
-            android:fragment="com.android.settings.twisted.FlingSettings" />
+            android:fragment="com.android.settings.twisted.navigationbar.FlingSettings" />
 
     </PreferenceCategory>
 
@@ -78,7 +78,7 @@
         <PreferenceScreen
             android:key="pulse_settings"
             android:title="@string/pulse_settings"
-            android:fragment="com.android.settings.twisted.PulseSettings" />
+            android:fragment="com.android.settings.twisted.navigationbar.PulseSettings" />
 
     </PreferenceCategory>
 

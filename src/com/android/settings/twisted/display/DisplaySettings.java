@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.settings.twisted;
+package com.android.settings.twisted.display;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -46,7 +46,7 @@ import com.android.settings.Utils;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-public class TwistedDisplay extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class DisplaySettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
@@ -61,7 +61,7 @@ public class TwistedDisplay extends SettingsPreferenceFragment implements OnPref
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.disp_settings);
+        addPreferencesFromResource(R.xml.twisted_display);
 
 
         mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);

@@ -1,6 +1,6 @@
 /*
+ * Copyright (C) 2015-2016 The Dirty Unicorns Project
  * Copyright (C) 2016 The Pure Nexus Project
- * Copyright (C) 2016 Flash ROM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.settings.twisted;
+package com.android.settings.twisted.statusbar;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -40,32 +40,33 @@ import java.util.HashMap;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import android.provider.Settings.SettingNotFoundException;
-
 import com.android.settings.Utils;
+
+import com.android.settings.preference.CustomSeekBarPreference;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-public class LockScreenItemsSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class StatusbarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
-    private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+    private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
 
-    private ListPreference mLockClockFonts;
+    private SwitchPreference mEnableNC;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.lockscreen_items_settings);
-        PreferenceScreen prefScreen = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
 
-        mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
-        mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
-                resolver, Settings.System.LOCK_CLOCK_FONTS, 4)));
-        mLockClockFonts.setSummary(mLockClockFonts.getEntry());
-        mLockClockFonts.setOnPreferenceChangeListener(this);
+        addPreferencesFromResource(R.xml.twisted_statusbar);
+
+        final PreferenceScreen prefSet = getPreferenceScreen();
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        mEnableNC = (SwitchPreference) findPreference(STATUS_BAR_NOTIF_COUNT);
+        mEnableNC.setOnPreferenceChangeListener(this);
+        int EnableNC = Settings.System.getInt(getContentResolver(),
+                STATUS_BAR_NOTIF_COUNT, 0);
+        mEnableNC.setChecked(EnableNC != 0);
     }
 
     @Override
@@ -73,13 +74,18 @@ public class LockScreenItemsSettings extends SettingsPreferenceFragment implemen
         return MetricsEvent.TWISTED;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mLockClockFonts) {
-            Settings.System.putInt(resolver, Settings.System.LOCK_CLOCK_FONTS,
-                    Integer.valueOf((String) newValue));
-            mLockClockFonts.setValue(String.valueOf(newValue));
-            mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+            ContentResolver resolver = getActivity().getContentResolver();
+        if  (preference == mEnableNC) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver, STATUS_BAR_NOTIF_COUNT,
+                    value ? 1 : 0);
             return true;
         }
         return false;

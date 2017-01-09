@@ -60,7 +60,6 @@ import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.ChooseAccountActivity;
 import com.android.settings.accounts.ManagedProfileSettings;
-import com.android.settings.twistedcore.TwistedCoreSettings;
 import com.android.settings.applications.AdvancedAppSettings;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.applications.ExpandedDesktopPreferenceFragment;
@@ -135,10 +134,12 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
-import com.android.settings.twisted.FlingSettings;
-import com.android.settings.twisted.NavbarSettings;
-import com.android.settings.twisted.SmartbarSettings;
-import com.android.settings.twisted.PulseSettings;
+// Twisted
+import com.android.settings.twisted.TwistedSettings;
+import com.android.settings.twisted.navigationbar.FlingSettings;
+import com.android.settings.twisted.navigationbar.NavbarSettings;
+import com.android.settings.twisted.navigationbar.SmartbarSettings;
+import com.android.settings.twisted.navigationbar.PulseSettings;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -265,7 +266,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.AccessibilitySettingsActivity.class.getName(),
             Settings.PrintSettingsActivity.class.getName(),
             Settings.PaymentSettingsActivity.class.getName(),
-            Settings.TwistedCoreSettingsActivity.class.getName(),
+            Settings.TwistedSettingsActivity.class.getName(),
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -365,7 +366,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
-            TwistedCoreSettings.class.getName(),
+            TwistedSettings.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName(),
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),

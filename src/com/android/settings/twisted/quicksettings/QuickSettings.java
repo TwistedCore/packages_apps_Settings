@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.settings.twisted;
+package com.android.settings.twisted.quicksettings;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -47,7 +47,7 @@ import com.android.settings.preference.CustomSeekBarPreference;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-public class TilesSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class QuickSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
 
     private static final String PREF_COLUMNS = "qs_layout_columns";
@@ -64,7 +64,7 @@ public class TilesSettings extends SettingsPreferenceFragment implements OnPrefe
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.tiles_settings);
+        addPreferencesFromResource(R.xml.twisted_quicksettings);
 
         final PreferenceScreen prefSet = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
 */
-package com.android.settings.twisted;
+package com.android.settings.twisted.statusbar;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
@@ -46,9 +46,9 @@ import com.android.settings.search.Indexable;
 import java.util.List;
 import java.util.ArrayList;
 
-public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
+public class BatterySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
-    private static final String TAG = "StatusbarBatteryStyle";
+    private static final String TAG = "BatterySettings";
 
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
@@ -78,7 +78,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.statusbar_battery_style);
+        addPreferencesFromResource(R.xml.twisted_battery);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
@@ -208,7 +208,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
                             new ArrayList<SearchIndexableResource>();
 
                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.statusbar_battery_style;
+                    sir.xmlResId = R.xml.twisted_battery;
                     result.add(sir);
 
                     return result;

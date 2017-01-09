@@ -1,4 +1,4 @@
-package com.android.settings.twistedcore;
+package com.android.settings.twisted;
 
 import android.os.Bundle;
 import android.preference.Preference;
@@ -12,9 +12,9 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-public class TwistedCoreSettings extends SettingsPreferenceFragment implements
+public class TwistedSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
-    private static final String TAG = "TwistedCoreSettings";
+    private static final String TAG = "TwistedSettings";
 
     @Override
     protected int getMetricsCategory() {
@@ -25,7 +25,7 @@ public class TwistedCoreSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.twistedcore);
+        addPreferencesFromResource(R.xml.twisted);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {

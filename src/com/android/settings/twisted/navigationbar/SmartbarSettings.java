@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.twisted;
+package com.android.settings.twisted.navigationbar;
 
 import java.io.File;
 import java.io.FileFilter;
