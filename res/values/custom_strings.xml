@@ -439,4 +439,5 @@
     <string name="custom_header_browse_title">Browse installed headers</string>
     <string name="custom_header_browse_summary">Long press on any image to use for static mode</string>
 
+    <string name="reset_wallpaper_notice">Default wallpaper restored</string>
 </resources>
