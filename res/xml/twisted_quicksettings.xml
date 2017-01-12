@@ -126,14 +126,15 @@
             android:dependency="status_bar_custom_header" />
 
      <com.android.settings.preference.CustomSeekBarPreference
-            android:key="status_bar_custom_header_shadow"
-            android:title="@string/status_bar_custom_header_shadow_title"
-            android:summary="@string/status_bar_custom_header_shadow_summary"
-            settings:max="100"
-            settings:min="0"
-            settings:units="@string/unit_percent"
-            android:persistent="false"
-            android:dependency="status_bar_custom_header" />
+        android:key="status_bar_custom_header_shadow"
+        android:title="@string/status_bar_custom_header_shadow_title"
+        android:summary="@string/status_bar_custom_header_shadow_summary"
+        settings:max="255"
+        settings:min="0"
+        settings:units=""
+        android:persistent="false"
+        android:dependency="status_bar_custom_header" />
+
 
         <PreferenceScreen
             android:key="custom_header_browse"

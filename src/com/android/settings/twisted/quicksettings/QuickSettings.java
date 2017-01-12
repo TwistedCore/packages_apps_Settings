@@ -139,7 +139,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         mHeaderShadow = (CustomSeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
         final int headerShadow = Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 80);
-        mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
+        mHeaderShadow.setValue(headerShadow);
         mHeaderShadow.setOnPreferenceChangeListener(this);
 
         mDaylightHeaderProvider = getResources().getString(R.string.daylight_header_provider);
@@ -194,11 +194,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
                     Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
             int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
             mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
-        } else if (preference == mHeaderShadow) {
+         } else if (preference == mHeaderShadow) {
             Integer headerShadow = (Integer) newValue;
-            int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, headerShadow);
+            return true;
         } else if (preference == mHeaderProvider) {
             String value = (String) newValue;
             Settings.System.putString(getContentResolver(),
