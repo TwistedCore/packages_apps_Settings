@@ -136,7 +136,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
         mDaylightHeaderPack.setOnPreferenceChangeListener(this);
 
-        mHeaderShadow = (SeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
+        mHeaderShadow = (CustomSeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
         final int headerShadow = Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 80);
         mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
