@@ -436,4 +436,6 @@
 
     <string name="qs_advanced_bt_title">Advanced bluetooth tile</string>
     <string name="qs_advanced_bt_summary">Enable one tap action to enable or disable bluetooth</string>
+    <string name="qs_advanced_wifi_title">Advanced WiFi tile</string>
+    <string name="qs_advanced_wifi_summary">Enable one tap action to enable or disable WiFi</string>
 </resources>

@@ -34,6 +34,12 @@
         android:summary="@string/qs_advanced_bt_summary"
         android:defaultValue="false" />
 
+    <com.android.settings.preference.SecureSettingSwitchPreference
+        android:key="qs_advanced_wifi"
+        android:title="@string/qs_advanced_wifi_title"
+        android:summary="@string/qs_advanced_wifi_summary"
+        android:defaultValue="false" />
+
      <com.android.settings.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
