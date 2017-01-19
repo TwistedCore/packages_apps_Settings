@@ -433,4 +433,7 @@
     <string name="custom_header_browse_summary">Long press on any image to use for static mode</string>
 
     <string name="reset_wallpaper_notice">Default wallpaper restored</string>
+
+    <string name="qs_advanced_bt_title">Advanced bluetooth tile</string>
+    <string name="qs_advanced_bt_summary">Enable one tap action to enable or disable bluetooth</string>
 </resources>
