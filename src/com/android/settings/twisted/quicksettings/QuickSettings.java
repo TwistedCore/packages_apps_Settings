@@ -65,6 +65,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
+    private static final String PREF_QS_EASY_TOGGLE = "qs_easy_toggle";
 
     private CustomSeekBarPreference mQsColumns;
     private CustomSeekBarPreference mRowsPortrait;
@@ -75,6 +76,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private ListPreference mHeaderProvider;
     private String mDaylightHeaderProvider;
     private PreferenceScreen mHeaderBrowse;
+    private SwitchPreference mEasyToggle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -109,6 +111,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
                 Settings.System.QS_ROWS_LANDSCAPE, defaultValue);
         mRowsLandscape.setValue(rowsLandscape / 1);
         mRowsLandscape.setOnPreferenceChangeListener(this);
+
+        mEasyToggle = (SwitchPreference) findPreference(PREF_QS_EASY_TOGGLE);
+        mEasyToggle.setOnPreferenceChangeListener(this);
+        mEasyToggle.setChecked((Settings.Secure.getInt(resolver,
+                Settings.Secure.QS_EASY_TOGGLE, 0) == 1));
 
         // headers
         String settingHeaderPackage = Settings.System.getString(getContentResolver(),
@@ -187,6 +194,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         } else if (preference == mRowsLandscape) {
             int rowsLandscape = (Integer) newValue;
             Settings.System.putInt(resolver, Settings.System.QS_ROWS_LANDSCAPE, rowsLandscape * 1);
+            return true;
+        } else if  (preference == mEasyToggle) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.QS_EASY_TOGGLE, checked ? 1:0);
             return true;
         } else if (preference == mDaylightHeaderPack) {
             String value = (String) newValue;
