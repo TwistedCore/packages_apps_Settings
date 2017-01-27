@@ -95,7 +95,6 @@ public class StatusbarSettings extends SettingsPreferenceFragment implements OnP
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mTextColor.setSummary(hexColor);
         mTextColor.setNewPreviewColor(intColor);
-        mTextColor.setAlphaSliderVisible(true);
 
         mIconColor = (ColorPickerPreference) findPreference(ICON_COLOR);
         mIconColor.setOnPreferenceChangeListener(this);
@@ -104,7 +103,6 @@ public class StatusbarSettings extends SettingsPreferenceFragment implements OnP
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mIconColor.setSummary(hexColor);
         mIconColor.setNewPreviewColor(intColor);
-        mIconColor.setAlphaSliderVisible(true);
 
         mTickerFontSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_TICKER_FONT_SIZE);
         mTickerFontSize.setValue(Settings.System.getInt(resolver,
