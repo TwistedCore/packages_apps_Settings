@@ -35,4 +35,11 @@
         android:defaultValue="true"
         android:dependency="volume_rocker_wake" />
 
+        <!-- Force use of media stream -->
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="volume_keys_control_media_stream"
+            android:title="@string/volume_keys_control_media_stream_title"
+            android:summary="@string/volume_keys_control_media_stream_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen> 
