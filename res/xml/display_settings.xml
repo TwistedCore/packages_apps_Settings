@@ -93,7 +93,7 @@
                 android:key="dashboard_category"
                 android:title="@string/dashboard_category">
 
-        <com.android.settings.preference.CustomSeekBarPreference
+        <com.android.settings.twisted.preference.CustomSeekBarPreference
                 android:key="dashboard_portrait_columns"
                 android:title="@string/dashboard_columns_portrait_title"
                 settings:max="3"
@@ -101,7 +101,7 @@
                 settings:units=""
                 android:persistent="false" />
 
-        <com.android.settings.preference.CustomSeekBarPreference
+        <com.android.settings.twisted.preference.CustomSeekBarPreference
                 android:key="dashboard_landscape_columns"
                 android:title="@string/dashboard_columns_landscape_title"
                 settings:max="5"

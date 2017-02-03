@@ -57,7 +57,7 @@ import com.android.settings.search.Indexable;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedPreference;
 
-import com.android.settings.preference.CustomSeekBarPreference;
+import com.android.settings.twisted.preference.CustomSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
