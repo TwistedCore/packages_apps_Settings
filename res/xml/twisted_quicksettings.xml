@@ -74,6 +74,12 @@
             android:defaultValue="false" />
 
      <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="qs_running_services_toggle"
+            android:title="@string/qs_running_services_title"
+            android:summary="@string/qs_running_services_summary"
+            android:defaultValue="true" />
+
+     <com.android.settings.preference.SystemSettingSwitchPreference
             android:key="qs_date_time_center"
             android:title="@string/qs_date_time_center_title"
             android:summary="@string/qs_date_time_center_summary"
