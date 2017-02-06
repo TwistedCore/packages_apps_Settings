@@ -71,5 +71,11 @@
             android:key="twisted_volumerocker_settings"
             android:title="@string/volumerocker_twisted_title"
 	     android:summary="@string/volumerocker_twisted_summary"/>
+	 <!-- Screen State -->
+        <PreferenceScreen
+            android:key="screenstate_category"
+            android:title="@string/screen_state_toggles_title" 
+            android:fragment="com.android.settings.twisted.screenstate.ScreenStateToggles" 
+	     android:summary="@string/screenstate_twisted_summary" />
 
 </PreferenceScreen>
